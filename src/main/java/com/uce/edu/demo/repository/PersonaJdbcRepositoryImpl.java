@@ -17,7 +17,8 @@ public class PersonaJdbcRepositoryImpl implements IPersonaJdbcRepository{
 	@Override
 	public Persona buscarPorId(int id) {
 		// TODO Auto-generated method stub
-		return this.jdbcTemplate.queryForObject("select * from persona where id=?", new Object[] {id},new BeanPropertyRowMapper<Persona>(Persona.class));
+		return this.jdbcTemplate.queryForObject("select * from persona where id=?", new Object[] {id},
+				new BeanPropertyRowMapper<Persona>(Persona.class));
 		
 	}
 	
@@ -25,8 +26,9 @@ public class PersonaJdbcRepositoryImpl implements IPersonaJdbcRepository{
 	@Override
 	public void insertar(Persona persona) {
 		// TODO Auto-generated method stub
-		this.jdbcTemplate.update("insert into persona(id, nomre, apellido) values (?,?,?)",
+		this.jdbcTemplate.update("insert into persona (id, nombre, apellido) values (?,?,?)",
 					new Object[] {persona.getId(),persona.getNombre(),persona.getApellido()});
+		System.out.println(persona);
 	}
 
 	@Override

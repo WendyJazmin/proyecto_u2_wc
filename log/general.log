@@ -15,3 +15,53 @@ DEBUG 2022-06-27 18:30:28,767 com.uce.edu.demo.ProyectoU2WcApplication (Proyecto
   2022-06-27 18:49:17 INFO  ProyectoU2WcApplication:23 - hola mundo log4j
   2022-06-27 18:49:42 DEBUG ProyectoU2WcApplication:22 - HELLO
 2022-06-27 18:49:42 INFO  ProyectoU2WcApplication:23 - hola mundo log4j
+2022-06-27 20:29:15 DEBUG ProyectoU2WcApplication:30 - face
+2022-06-28 08:47:31 DEBUG ProyectoU2WcApplication:30 - face
+2022-06-28 09:42:52 DEBUG ProyectoU2WcApplication:48 - com.uce.edu.demo.service.PersonaJdbcServiceImpl@3dbc6d37
+2022-06-28 09:44:04 DEBUG ProyectoU2WcApplication:49 - com.uce.edu.demo.service.PersonaJdbcServiceImpl@55814a66
+2022-06-28 09:55:21 DEBUG ProyectoU2WcApplication:49 - com.uce.edu.demo.service.PersonaJdbcServiceImpl@1dd7afc8
+2022-06-28 09:56:35 DEBUG ProyectoU2WcApplication:49 - com.uce.edu.demo.service.PersonaJdbcServiceImpl@41202363
+2022-06-28 09:57:34 DEBUG ProyectoU2WcApplication:49 - com.uce.edu.demo.service.PersonaJdbcServiceImpl@5bed56c0
+2022-06-28 10:06:40 DEBUG ProyectoU2WcApplication:51 - com.uce.edu.demo.service.PersonaJdbcServiceImpl@1018600e
+2022-06-28 10:08:05 DEBUG ProyectoU2WcApplication:51 - com.uce.edu.demo.service.PersonaJdbcServiceImpl@442389b
+2022-06-28 10:21:28 INFO  PersonaJdbcRepositoryImpl:35 - se insertó la persona: Persona [id = 6, nombre = Paola, apellido = Perez]
+2022-06-28 10:21:28 DEBUG ProyectoU2WcApplication:51 - com.uce.edu.demo.service.PersonaJdbcServiceImpl@4ab642ac
+2022-06-28 10:22:57 INFO  PersonaJdbcRepositoryImpl:35 - se insertó la persona: Persona [id = 8, nombre = Paola, apellido = Perez]
+2022-06-28 10:22:57 DEBUG ProyectoU2WcApplication:51 - com.uce.edu.demo.service.PersonaJdbcServiceImpl@6381a56b
+2022-06-28 10:24:09 DEBUG ProyectoU2WcApplication:51 - Persona [id = 8, nombre = Paola, apellido = Perez]
+2022-06-28 11:01:17 INFO  EstudianteJdbcRepositoryImpl:35 - se insertó la persona: Estudiante [id = 1, nombre = Alex, apellido = Alvear, edad = 23, numeroTelefono = 09328484]
+2022-06-28 11:08:52 INFO  EstudianteJdbcRepositoryImpl:36 - se inserto al estudiante: Estudiante [id = 2, nombre = Marco, apellido = Perez, edad = 23, numeroTelefono = 083247556]
+2022-06-28 11:10:33 INFO  EstudianteJdbcRepositoryImpl:44 - se actualizo al estudiante: Estudiante [id = 2, nombre = Marco, apellido = Perez, edad = 24, numeroTelefono = 083247556]
+2022-06-28 11:11:21 INFO  EstudianteJdbcRepositoryImpl:44 - se actualizo al estudiante: Estudiante [id = 2, nombre = Marco, apellido = Perez, edad = 24, numeroTelefono = 083247556]
+2022-06-28 11:11:21 INFO  EstudianteJdbcRepositoryImpl:51 - se elimino al estudiante con id: 1
+2022-06-28 11:13:03 INFO  EstudianteJdbcRepositoryImpl:44 - se actualizo al estudiante: Estudiante [id = 2, nombre = Marco, apellido = Perez, edad = 24, numeroTelefono = 083247556]
+2022-06-28 11:13:03 INFO  EstudianteJdbcRepositoryImpl:24 - se busco al estudiante: 2
+2022-06-28 11:15:17 INFO  EstudianteJdbcRepositoryImpl:44 - se actualizo al estudiante: Estudiante [id = 2, nombre = Marco, apellido = Perez, edad = 24, numeroTelefono = 083247556]
+2022-06-28 11:15:17 INFO  EstudianteJdbcRepositoryImpl:24 - se busco al estudiante: 2
+2022-06-28 11:16:05 INFO  EstudianteJdbcRepositoryImpl:44 - se actualizo al estudiante: Estudiante [id = 2, nombre = Marco, apellido = Perez, edad = 24, numeroTelefono = 083247556]
+2022-06-28 11:16:05 INFO  EstudianteJdbcRepositoryImpl:24 - se busco al estudiante: 2
+2022-06-28 11:22:48 INFO  EstudianteJdbcRepositoryImpl:51 - se elimino al estudiante con id: 2
+2022-06-28 11:27:57 INFO  EstudianteJdbcRepositoryImpl:36 - se inserto al estudiante: Estudiante [id = 1, nombre = Marco, apellido = Perez, edad = 23, numeroTelefono = 083247556]
+2022-06-28 11:27:57 INFO  EstudianteJdbcRepositoryImpl:36 - se inserto al estudiante: Estudiante [id = 2, nombre = Jeff, apellido = Satur, edad = 18, numeroTelefono = 097374573]
+2022-06-28 11:27:57 INFO  EstudianteJdbcRepositoryImpl:36 - se inserto al estudiante: Estudiante [id = 3, nombre = daniel, apellido = Marlon, edad = 24, numeroTelefono = 0908772573]
+2022-06-28 11:27:57 INFO  EstudianteJdbcRepositoryImpl:36 - se inserto al estudiante: Estudiante [id = 4, nombre = Sara, apellido = Lopez, edad = 20, numeroTelefono = 0900137474223]
+2022-06-28 11:27:57 INFO  EstudianteJdbcRepositoryImpl:44 - se actualizo al estudiante: Estudiante [id = 1, nombre = Marco, apellido = Perez, edad = 24, numeroTelefono = 083247556]
+2022-06-28 11:27:57 INFO  EstudianteJdbcRepositoryImpl:24 - se busco al estudiante con id: 2
+2022-06-28 11:27:57 INFO  EstudianteJdbcRepositoryImpl:51 - se elimino al estudiante con id: 4
+2022-06-28 11:38:18 INFO  EstudianteJdbcRepositoryImpl:35 - se inserto al estudiante: Estudiante [id = 1, nombre = Marco, apellido = Perez, edad = 23, numeroTelefono = 083247556]
+2022-06-28 11:38:18 INFO  EstudianteJdbcRepositoryImpl:35 - se inserto al estudiante: Estudiante [id = 2, nombre = Jeff, apellido = Satur, edad = 18, numeroTelefono = 097374573]
+2022-06-28 11:38:18 INFO  EstudianteJdbcRepositoryImpl:35 - se inserto al estudiante: Estudiante [id = 3, nombre = daniel, apellido = Marlon, edad = 24, numeroTelefono = 0908772573]
+2022-06-28 11:38:18 INFO  EstudianteJdbcRepositoryImpl:35 - se inserto al estudiante: Estudiante [id = 4, nombre = Sara, apellido = Lopez, edad = 20, numeroTelefono = 0900137474223]
+2022-06-28 11:38:18 INFO  EstudianteJdbcRepositoryImpl:43 - 
+se actualizo al estudiante: Estudiante [id = 1, nombre = Marco, apellido = Perez, edad = 24, numeroTelefono = 083247556]
+2022-06-28 11:38:18 INFO  EstudianteJdbcRepositoryImpl:23 - 
+se busco al estudiante con id: 2
+2022-06-28 11:38:18 INFO  EstudianteJdbcRepositoryImpl:50 - 
+se elimino al estudiante con id: 4
+2022-06-28 11:40:04 INFO  EstudianteJdbcRepositoryImpl:35 - se inserto al estudiante: Estudiante [id = 1, nombre = Marco, apellido = Perez, edad = 23, numeroTelefono = 083247556]
+2022-06-28 11:40:04 INFO  EstudianteJdbcRepositoryImpl:35 - se inserto al estudiante: Estudiante [id = 2, nombre = Jeff, apellido = Satur, edad = 18, numeroTelefono = 097374573]
+2022-06-28 11:40:04 INFO  EstudianteJdbcRepositoryImpl:35 - se inserto al estudiante: Estudiante [id = 3, nombre = daniel, apellido = Marlon, edad = 24, numeroTelefono = 0908772573]
+2022-06-28 11:40:04 INFO  EstudianteJdbcRepositoryImpl:35 - se inserto al estudiante: Estudiante [id = 4, nombre = Sara, apellido = Lopez, edad = 20, numeroTelefono = 0900137474223]
+2022-06-28 11:40:04 INFO  EstudianteJdbcRepositoryImpl:43 - se actualizo al estudiante: Estudiante [id = 1, nombre = Marco, apellido = Perez, edad = 24, numeroTelefono = 083247556]
+2022-06-28 11:40:04 INFO  EstudianteJdbcRepositoryImpl:23 - se busco al estudiante con id: 2
+2022-06-28 11:40:04 INFO  EstudianteJdbcRepositoryImpl:50 - se elimino al estudiante con id: 4

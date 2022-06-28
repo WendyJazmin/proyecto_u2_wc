@@ -16,6 +16,7 @@ public class PersonaJdbcServiceImpl implements IPersonaJdbcService {
 	public void guardar(Persona persona) {
 		// TODO Auto-generated method stub
 		this.iPersonaJdbcRepository.insertar(persona);
+		
 	}
 	@Override
 	public void actualizar(Persona persona) {
@@ -26,6 +27,12 @@ public class PersonaJdbcServiceImpl implements IPersonaJdbcService {
 	public void eliminar(int id) {
 		// TODO Auto-generated method stub
 		this.iPersonaJdbcRepository.eliminar(id);
+	}
+	@Override
+	public Persona buscarPorId(int id) {
+		// TODO Auto-generated method stub
+		System.out.println("se elimino la persona con id: "+id);
+		return this.iPersonaJdbcRepository.buscarPorId(id);
 	}
 
 }

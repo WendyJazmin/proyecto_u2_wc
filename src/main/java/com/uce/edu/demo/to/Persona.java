@@ -8,6 +8,10 @@ public class Persona {
 	
 	
 
+	@Override
+	public String toString() {
+		return "Persona [id = " + id + ", nombre = " + nombre + ", apellido = " + apellido + "]";
+	}
 	//set y get
 	public String getNombre() {
 		return nombre;
