@@ -1,1 +1,17 @@
 DEBUG 2022-06-27 16:50:34,336 com.uce.edu.demo.ProyectoU2WcApplication (ProyectoU2WcApplication.java:run:22) - HELLO
+DEBUG 2022-06-27 18:21:19,492 com.uce.edu.demo.ProyectoU2WcApplication (ProyectoU2WcApplication.java:run:22) - HELLO
+ INFO 2022-06-27 18:21:19,494 com.uce.edu.demo.ProyectoU2WcApplication (ProyectoU2WcApplication.java:run:23) - hola mundo log4j
+DEBUG 2022-06-27 18:30:28,767 com.uce.edu.demo.ProyectoU2WcApplication (ProyectoU2WcApplication.java:run:22) - HELLO
+ INFO 2022-06-27 18:30:28,773 com.uce.edu.demo.ProyectoU2WcApplication (ProyectoU2WcApplication.java:run:23) - hola mundo log4j
+2022-06-27 18:42:54 DEBUG ProyectoU2WcApplication:22 - HELLO
+2022-06-27 18:42:54 INFO  ProyectoU2WcApplication:23 - hola mundo log4j
+2022-06-27 18:45:29 DEBUG ProyectoU2WcApplication:22 - HELLO
+2022-06-27 18:45:29 INFO  ProyectoU2WcApplication:23 - hola mundo log4j
+2022-06-27 18:48:07,262 DEBUG ProyectoU2WcApplication:22 - HELLO
+2022-06-27 18:48:07,265 INFO  ProyectoU2WcApplication:23 - hola mundo log4j
+2022-06-27 18:48:40,968 DEBUG ProyectoU2WcApplication:22 - HELLO
+2022-06-27 18:48:40,970 INFO  ProyectoU2WcApplication:23 - hola mundo log4j
+2022-06-27 18:49:17 DEBUG ProyectoU2WcApplication:22 - HELLO
+  2022-06-27 18:49:17 INFO  ProyectoU2WcApplication:23 - hola mundo log4j
+  2022-06-27 18:49:42 DEBUG ProyectoU2WcApplication:22 - HELLO
+2022-06-27 18:49:42 INFO  ProyectoU2WcApplication:23 - hola mundo log4j
