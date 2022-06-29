@@ -1,6 +1,6 @@
 package com.uce.edu.demo.to;
 
-public class Persona {
+public class PersonaTo {
 
 	private int id;
 	private String nombre;
