@@ -6,8 +6,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.uce.edu.demo.estudiante.modelo.Estudiante;
 import com.uce.edu.demo.estudiante.service.IEstudianteJdbcService;
-import com.uce.edu.demo.estudiante.to.Estudiante;
+import com.uce.edu.demo.estudiante.service.IEstudianteJpaService;
+import com.uce.edu.demo.estudiante.to.EstudianteTo;
 import com.uce.edu.demo.repository.modelo.Persona;
 import com.uce.edu.demo.service.IPersonaJdbcService;
 import com.uce.edu.demo.service.IPersonaJpaService;
@@ -26,6 +28,9 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 	@Autowired
 	private IEstudianteJdbcService iEstudianteJdbcService;
 	
+	@Autowired
+	private IEstudianteJpaService iEstudianteJpaService;
+	
 	private static Logger Logg = Logger.getLogger(ProyectoU2WcApplication.class);
 
 	
@@ -37,26 +42,34 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		
 		
-		//Logg.info(this.iPersonaJdbcService.buscarTodos());
-		Logg.info("Datos con JPA: "+this.iPersonaJpaService.buscarPorId(10));
+		//INSERTAR
+		Estudiante estudiante = new Estudiante();
+		estudiante.setId(6);
+		estudiante.setNombre("Dominik");
+		estudiante.setApellido("Velez");
+		estudiante.setEdad(18);
+		estudiante.setNumeroTelefono("0989678055");
 		
-		Persona per1 = new Persona();
-		per1.setId(1);
-		per1.setNombre("Edison");
-		per1.setApellido("Cayambe");
+		this.iEstudianteJpaService.guardar(estudiante);
+
 		
-		//GUARDAR
-		//this.iPersonaJpaService.guardar(per1);
-		
+		//BUSCAR
+		Logg.info(this.iEstudianteJpaService.buscarPorId(1));
+				
+				
 		//ACTUALIZAR
-		Persona per2 = new Persona();
-		per2.setId(2);
-		per2.setNombre("Ana");
-		per2.setApellido("Camir");
-		this.iPersonaJpaService.actualizar(per2);
+		Estudiante estudiante2 = new Estudiante();
+		estudiante2.setId(2);
+		estudiante2.setNombre("Jeff");
+		estudiante2.setApellido("Satur");
+		estudiante2.setEdad(27);
+		estudiante2.setNumeroTelefono("089421156");
 		
-		//ELIMINAR}
-		//this.iPersonaJpaService.eliminar(6);
+		this.iEstudianteJpaService.actualizar(estudiante2);
+		
+		
+		//ELIMINAR
+		this.iEstudianteJpaService.eliminar(4);
 		
 	}
 
