@@ -2,22 +2,27 @@ package com.uce.edu.demo.repository.modelo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "persona")//nombre de la tabla
+@Table(name = "persona1")//nombre de la tabla
 public class Persona {
 
 	//en el mapeo de entitys no se usa datos primitivos
 	@Id
 	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pers_id_seq")
+	@SequenceGenerator(name="pers_id_seq", sequenceName = "pers_id_seq", allocationSize = 1)
 	private Integer id;
 	
-	@Column(name = "nombre")
+	@Column(name = "pers_nombre")
 	private String nombre;
 	
-	@Column(name = "apellido")
+	@Column(name = "pers_apellido")
 	private String apellido;
 	
 	
