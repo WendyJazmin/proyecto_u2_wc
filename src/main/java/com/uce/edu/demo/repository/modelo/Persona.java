@@ -9,12 +9,12 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "persona1")//nombre de la tabla
+@Table(name = "persona")//nombre de la tabla
 public class Persona {
 
 	//en el mapeo de entitys no se usa datos primitivos
 	@Id
-	@Column(name = "id")
+	@Column(name = "pers_id")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pers_id_seq")
 	@SequenceGenerator(name="pers_id_seq", sequenceName = "pers_id_seq", allocationSize = 1)
 	private Integer id;
@@ -25,11 +25,17 @@ public class Persona {
 	@Column(name = "pers_apellido")
 	private String apellido;
 	
+	@Column(name = "pers_genero")
+	private String genero;
+	
+	@Column(name = "pers_cedula")
+	private String cedula;
 	
 	
 	@Override
 	public String toString() {
-		return "Persona [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + "]";
+		return "Persona [id = " + id + ", nombre = " + nombre + ", apellido = " + apellido + ", genero = " + genero
+				+ ", cedula = " + cedula + "]";
 	}
 	//sey y get
 	public Integer getId() {
@@ -49,6 +55,22 @@ public class Persona {
 	}
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
+	}
+	public String getGenero() {
+		return genero;
+	}
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
+
+	public String getCedula() {
+		return cedula;
+	}
+
+
+	public void setCedula(String cedula) {
+		this.cedula = cedula;
 	}
 	
 	

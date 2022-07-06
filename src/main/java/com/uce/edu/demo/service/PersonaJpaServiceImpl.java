@@ -38,6 +38,18 @@ public class PersonaJpaServiceImpl implements IPersonaJpaService{
 		this.iPersonaJpaRepository.eliminar(id);
 	}
 
+	@Override
+	public Persona buscarPorCedula(String cedula) {
+		// TODO Auto-generated method stub
+		return this.iPersonaJpaRepository.buscarPorCedula(cedula);
+	}
+
+	@Override
+	public List<Persona> buscarPorApellido(String apellido) {
+		// TODO Auto-generated method stub
+		return this.iPersonaJpaRepository.buscarPorApellido(apellido);
+	}
+
 
 
 }

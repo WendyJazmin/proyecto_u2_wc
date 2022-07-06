@@ -1,0 +1,6 @@
+2022-07-05 19:51:23 INFO  ProyectoU2WcApplication:68 - Buscar persona: Persona [id = 3, nombre = Pablo, apellido = Perez]
+2022-07-05 19:52:48 INFO  ProyectoU2WcApplication:68 - Buscar persona: Persona [id = 3, nombre = Pablo, apellido = Perez, genero = M, cedula = 2394864]
+2022-07-05 20:07:48 INFO  ProyectoU2WcApplication:68 - Buscar persona: Persona [id = 3, nombre = Pablo, apellido = Perez, genero = M, cedula = 2394864]
+2022-07-05 20:07:48 INFO  ProyectoU2WcApplication:73 - Persona: Persona [id = 1, nombre = Pepito14, apellido = Perez, genero = null, cedula = null]
+2022-07-05 20:07:48 INFO  ProyectoU2WcApplication:73 - Persona: Persona [id = 2, nombre = Pepito14, apellido = Perez, genero = M, cedula = 1732664]
+2022-07-05 20:07:48 INFO  ProyectoU2WcApplication:73 - Persona: Persona [id = 3, nombre = Pablo, apellido = Perez, genero = M, cedula = 2394864]
