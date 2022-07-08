@@ -38,12 +38,12 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 		//GUARDAR
 		Persona per1 = new Persona();
 		//per1.setId(8);
-		per1.setNombre("Pablo");
-		per1.setApellido("Perez");
-		per1.setGenero("M");
-		per1.setCedula("2394864");
+		per1.setNombre("Dana");
+		per1.setApellido("Velez");
+		per1.setGenero("F");
+		per1.setCedula("13343590");
 		
-		//this.iPersonaJpaService.guardar(per1);
+		this.iPersonaJpaService.guardar(per1);
 		
 		
 		//ACTUALIZAR
@@ -66,6 +66,20 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 		for(Persona item : listaPersona) {
 			Logg.info("Persona: "+item);
 		}
+		
+		//BUSCAR POR NOMBRE
+		List<Persona> listaNombres = this.iPersonaJpaService.buscarPorNombre("Pepito14");
+		for(Persona item : listaNombres) {
+			Logg.info("Persona: "+item);
+		}
+		
+		
+		//BUSCAR POR GENERO
+		List<Persona> listaGenero = this.iPersonaJpaService.buscarPorGenero("F");
+		for(Persona item : listaGenero) {
+			Logg.info("Persona: "+item);
+		}
+		
 	}
 
 }
