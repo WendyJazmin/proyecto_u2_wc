@@ -35,51 +35,12 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 		//BUSCAR
 		//Logg.info("Datos con JPA: "+this.iPersonaJpaService.buscarPorId(4));
 		
-		//GUARDAR
-		Persona per1 = new Persona();
-		//per1.setId(8);
-		per1.setNombre("Dana");
-		per1.setApellido("Velez");
-		per1.setGenero("F");
-		per1.setCedula("13343590");
+		//Actualizar con JPQL
+		int resultado =this.iPersonaJpaService.actualizarPorApellido("FE", "Perez");
+		Logg.info("Cantidad de registros Actualizados: "+resultado);
 		
-		this.iPersonaJpaService.guardar(per1);
-		
-		
-		//ACTUALIZAR
-		Persona per2 = new Persona();
-		per2.setId(4);
-		per2.setNombre("AndreA");
-		per2.setApellido("Solis");
-		//this.iPersonaJpaService.actualizar(per2);
-		
-		//ELIMINAR
-		//this.iPersonaJpaService.eliminar(6);
-		
-		
-		//BUSCAR POR CEDULA
-		Persona p = this.iPersonaJpaService.buscarPorCedula("2394864");
-		Logg.info("Buscar persona: "+p);
-	
-		//BUSCAR POR APELLIDO
-		List<Persona> listaPersona = this.iPersonaJpaService.buscarPorApellido("Perez");
-		for(Persona item : listaPersona) {
-			Logg.info("Persona: "+item);
-		}
-		
-		//BUSCAR POR NOMBRE
-		List<Persona> listaNombres = this.iPersonaJpaService.buscarPorNombre("Pepito14");
-		for(Persona item : listaNombres) {
-			Logg.info("Persona: "+item);
-		}
-		
-		
-		//BUSCAR POR GENERO
-		List<Persona> listaGenero = this.iPersonaJpaService.buscarPorGenero("F");
-		for(Persona item : listaGenero) {
-			Logg.info("Persona: "+item);
-		}
-		
+		int resultado2 = this.iPersonaJpaService.eliminarPorGenero("FE");
+		Logg.info("Cantidad de eliminados: "+resultado2);
 	}
 
 }

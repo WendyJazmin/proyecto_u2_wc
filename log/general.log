@@ -45,3 +45,31 @@
 2022-07-08 14:21:56 INFO  ProyectoU2WcApplication:73 - Persona: Persona [id = 1, nombre = Pepito14, apellido = Perez, genero = null, cedula = null]
 2022-07-08 14:21:56 INFO  ProyectoU2WcApplication:73 - Persona: Persona [id = 2, nombre = Pepito14, apellido = Perez, genero = M, cedula = 1732664]
 2022-07-08 14:21:56 INFO  ProyectoU2WcApplication:80 - Persona: Persona [id = 4, nombre = Dana, apellido = Velez, genero = F, cedula = 13343590]
+2022-07-08 18:33:06 INFO  ProyectoU2WcApplication:62 - Buscar persona: Persona [id = 3, nombre = Pablo, apellido = Perez, genero = M, cedula = 2394864]
+2022-07-08 18:33:06 INFO  ProyectoU2WcApplication:67 - Persona: Persona [id = 1, nombre = Pepito14, apellido = Perez, genero = null, cedula = null]
+2022-07-08 18:33:06 INFO  ProyectoU2WcApplication:67 - Persona: Persona [id = 2, nombre = Pepito14, apellido = Perez, genero = M, cedula = 1732664]
+2022-07-08 18:33:06 INFO  ProyectoU2WcApplication:67 - Persona: Persona [id = 3, nombre = Pablo, apellido = Perez, genero = M, cedula = 2394864]
+2022-07-08 18:33:07 INFO  ProyectoU2WcApplication:73 - Persona: Persona [id = 1, nombre = Pepito14, apellido = Perez, genero = null, cedula = null]
+2022-07-08 18:33:07 INFO  ProyectoU2WcApplication:73 - Persona: Persona [id = 2, nombre = Pepito14, apellido = Perez, genero = M, cedula = 1732664]
+2022-07-08 18:33:07 INFO  ProyectoU2WcApplication:80 - Persona: Persona [id = 4, nombre = Dana, apellido = Velez, genero = F, cedula = 13343590]
+2022-07-08 18:33:07 INFO  ProyectoU2WcApplication:80 - Persona: Persona [id = 5, nombre = Dana, apellido = Velez, genero = F, cedula = 13343590]
+2022-07-08 18:35:21 INFO  ProyectoU2WcApplication:73 - Persona: Persona [id = 1, nombre = Pepito14, apellido = Perez, genero = null, cedula = null]
+2022-07-08 18:35:21 INFO  ProyectoU2WcApplication:73 - Persona: Persona [id = 2, nombre = Pepito14, apellido = Perez, genero = M, cedula = 1732664]
+2022-07-08 18:35:21 INFO  ProyectoU2WcApplication:80 - Persona: Persona [id = 4, nombre = Dana, apellido = Velez, genero = F, cedula = 13343590]
+2022-07-08 18:35:21 INFO  ProyectoU2WcApplication:80 - Persona: Persona [id = 5, nombre = Dana, apellido = Velez, genero = F, cedula = 13343590]
+2022-07-08 18:56:22 INFO  ProyectoU2WcApplication:82 - Persona: Persona [id = 1, nombre = Pepito14, apellido = Perez, genero = null, cedula = null]
+2022-07-08 18:56:22 INFO  ProyectoU2WcApplication:82 - Persona: Persona [id = 2, nombre = Pepito14, apellido = Perez, genero = M, cedula = 1732664]
+2022-07-08 18:56:22 INFO  ProyectoU2WcApplication:89 - Persona: Persona [id = 4, nombre = Dana, apellido = Velez, genero = F, cedula = 13343590]
+2022-07-08 18:56:22 INFO  ProyectoU2WcApplication:89 - Persona: Persona [id = 5, nombre = Dana, apellido = Velez, genero = F, cedula = 13343590]
+2022-07-08 18:58:02 INFO  ProyectoU2WcApplication:82 - Persona: Persona [id = 1, nombre = Pepito14, apellido = Perez, genero = null, cedula = null]
+2022-07-08 18:58:02 INFO  ProyectoU2WcApplication:82 - Persona: Persona [id = 2, nombre = Pepito14, apellido = Perez, genero = M, cedula = 1732664]
+2022-07-08 18:58:02 INFO  ProyectoU2WcApplication:89 - Persona: Persona [id = 4, nombre = Dana, apellido = Velez, genero = F, cedula = 13343590]
+2022-07-08 18:58:02 INFO  ProyectoU2WcApplication:89 - Persona: Persona [id = 5, nombre = Dana, apellido = Velez, genero = F, cedula = 13343590]
+2022-07-08 19:38:24 INFO  ProyectoU2WcApplication:40 - Cantidad de registrosActualizados: 3
+2022-07-08 19:40:35 INFO  ProyectoU2WcApplication:43 - Cantidad de eliminados: 3
+2022-07-08 19:44:48 INFO  ProyectoU2WcApplication:40 - Cantidad de registros Actualizados: 3
+2022-07-08 19:44:49 INFO  ProyectoU2WcApplication:43 - Cantidad de eliminados: 0
+2022-07-08 19:45:55 INFO  ProyectoU2WcApplication:43 - Cantidad de eliminados: 3
+2022-07-08 19:46:28 INFO  ProyectoU2WcApplication:43 - Cantidad de eliminados: 2
+2022-07-08 19:46:58 INFO  ProyectoU2WcApplication:40 - Cantidad de registros Actualizados: 0
+2022-07-08 19:46:58 INFO  ProyectoU2WcApplication:43 - Cantidad de eliminados: 0
