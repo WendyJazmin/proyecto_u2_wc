@@ -28,16 +28,6 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 	@Autowired
 	private IPersonaJpaService iPersonaJpaService;
 	
-	@Autowired
-	private IVehiculoJpaService iVehiculoService;
-	
-	@Autowired
-	private IPropietarioJpaService iPropietarioJpaService;
-	
-	@Autowired
-	private IMatriculaGestorService gestorService;
-	
-	
 	private static Logger Logg = Logger.getLogger(ProyectoU2WcApplication.class);
 
 	
@@ -48,78 +38,31 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		Persona persona = new Persona();
+		persona.setNombre("Daniel");
+		persona.setApellido("Velez");
+		persona.setCedula("23123455");
+		persona.setGenero("M");
+		this.iPersonaJpaService.guardar(persona);
 		
-		//INSERTAR vehiculo
-		Vehiculo vehiculo = new Vehiculo();
-		vehiculo.setMarca("Wolkswagen");
-		vehiculo.setPlaca("227re");
-		vehiculo.setPrecio(new BigDecimal(77000));
-		vehiculo.setTipo("pesado");
+		//1 TypedQuery
+		Persona perTyped = this.iPersonaJpaService.buscarPorCedulaTyped("1123455");
+		Logg.info("Persona Typed: "+perTyped);
 		
-		Vehiculo vehiculo2 = new Vehiculo();
-		vehiculo2.setMarca("Mercedes Benz");
-		vehiculo2.setPlaca("346op");
-		vehiculo2.setPrecio(new BigDecimal(140000));
-		vehiculo2.setTipo("liviano");
+		//2 NamedQuery
+		Persona perNamed = this.iPersonaJpaService.buscarPorCedulaNamed("1123455");
+		Logg.info("Persona Named: "+perNamed);
 		
-		this.iVehiculoService.insertarVehiculo(vehiculo);
-		this.iVehiculoService.insertarVehiculo(vehiculo2);
+		//3 TypedQuery
+		Persona perTypeNamed = this.iPersonaJpaService.buscarPorCedulaTypedNamed("1123455");
+		Logg.info("Persona TypedNamed: "+perTypeNamed);
 		
-		//BUSCAR VEHICULO por placa
-		Vehiculo vehiculo3 = this.iVehiculoService.buscarVehiculo("321sd");
-		Logg.info("Buscar vehiculo: "+vehiculo3);
-		
-		
-		//ACTUALIZAR VEHICULO
-		Vehiculo vehiculo4 = new Vehiculo();
-		vehiculo4.setMarca("Chevrolet");
-		vehiculo4.setPlaca("245gh");
-		vehiculo4.setPrecio(new BigDecimal(90000));
-		vehiculo4.setTipo("pesado");
-		
-		this.iVehiculoService.actualizarVehiculo(vehiculo4);
-		
-		
-		//ELIMINAR VEHICULO por placa
-		this.iVehiculoService.eliminarVehiculo("324fd");
-		
-		
-		//************************************************************
-		
-		//INSERTAR PROPIETARIO
-		Propietario propietario = new Propietario();
-		propietario.setNombre("Pamela");
-		propietario.setApellido("Romo");
-		propietario.setCedula("1324567");
-		propietario.setFechaNacimiento(LocalDateTime.of(2000, 8, 16, 9, 30));
-		
-		this.iPropietarioJpaService.crearPropietario(propietario);
-		
-		
-		//BUSCAR PROPIETARIO por cedula
-		Propietario propietario2 = this.iPropietarioJpaService.consultar("1234456");
-		Logg.info("Buscar propietario por id: "+propietario2);
-		
-		
-		//ELIMINAR PROPIETARIO por cedula
-		//this.iPropietarioJpaService.eliminarPorId(12);
-		this.iPropietarioJpaService.eliminarPropietario("2324");
-		
-		
-		//ACTUALIZAR PROPIETARIO
-		Propietario propietario3 = new Propietario();
-		propietario.setId(8);
-		propietario3.setNombre("Jenny");
-		propietario3.setApellido("Rivas");
-		propietario3.setCedula("113344355");
-		propietario3.setFechaNacimiento(LocalDateTime.of(2000, 9, 16, 9, 30));
-		
-		this.iPropietarioJpaService.actualizar(propietario3);
-		
-		//*******************************************************************
-		
-		//INSERTAR MATRICULA
-		this.gestorService.generarMatricula("2135156", "23445f");
+		//4. Varios NamedQuery
+		List<Persona>listaPersona= this.iPersonaJpaService.buscarPorNombreApellido("Daniel", "Velez");
+		for(Persona item:listaPersona) {
+			Logg.info(listaPersona);
+		}
+	
 	}
 
 }
