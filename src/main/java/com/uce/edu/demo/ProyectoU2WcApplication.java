@@ -43,49 +43,18 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Estudiante e = new Estudiante();
-		e.setApellido("Rodriguez");
-		e.setNombre("Carla");
-		e.setEdad(24);
-		e.setNumeroTelefono("01202941");
-		//this.iEstudianteJpaService.guardar(e);
-		
-		
-		//TyperQuery
-		Estudiante e2 = this.iEstudianteJpaService.buscarPorTelefonoTyped("0283883321");//buscando estudiando por su n° telefono
-		Logg.info("Estudiante Typed: "+e2);
-		
-		List<Estudiante>listae= this.iEstudianteJpaService.buscarPorEdadTyped(18);//buscando estudiantes mayores de 18
-		for(Estudiante item:listae) {
-			Logg.info("Estudiante EdadTyped: "+item);
-		}
-		
-		
-		//NamedQuery
-		List<Estudiante>listae2= this.iEstudianteJpaService.buscarPorEdadNamed(24);
-		for(Estudiante item:listae2) {
-			Logg.info("Estudiante EdadNamed: "+item);
-			
-		}
-		
-		List<Estudiante>listae3= this.iEstudianteJpaService.buscarPorNombreNamed("Carla");
-		for(Estudiante item:listae3) {
-			Logg.info("Estudiante NombreNamed: "+item);
-			
-		}
-		
-		
-		//Combinacion Typed y Named Query
-		List<Estudiante>listae4= this.iEstudianteJpaService.buscarPorApellidoTypedNamed("Chavez");
-		for(Estudiante item:listae4) {
-			Logg.info("Estudiante ApellidoTypedNamedNamed: "+item);
-			
-		}
 	
-		List<Estudiante>listae5= this.iEstudianteJpaService.buscarPorNombreTypedNamed("Carla");
-		for(Estudiante item:listae5) {
-			Logg.info("Estudiante NombreTypeNamed: "+item);
-	}
+		//NATIVE QUERY
+		Persona per2 = this.iPersonaJpaService.buscarPorCedulaNative("2394864");
+		Logg.info("Persona Native: "+per2);
+	
+		Persona per3 = this.iPersonaJpaService.buscarPorCedulaNamedNative("23123455");
+		Logg.info("Persona NamedNative: "+per3);
+	
+		Persona per4 = this.iPersonaJpaService.buscarPorCedulaCriteriaApi("1123455");
+		Logg.info("Persona CriteriaApi: "+per4);
+
 	}
 
+		
 }
