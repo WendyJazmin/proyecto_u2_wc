@@ -90,6 +90,39 @@ public class EstudianteJpaRepositoryImpl implements IEstudianteJpaRepository {
 		return miTypedQuery.getResultList();
 	}
 
+	@Override
+	public List<Estudiante> buscarPorNombreNative(String nombre) {
+		// TODO Auto-generated method stub
+		Query myQuery =this.entityManager.createNativeQuery("SELECT * FROM estudiante  WHERE estu_nombre = :datoNombre ORDER BY estu_edad",Estudiante.class);
+		myQuery.setParameter("datoNombre", nombre);
+		return (List<Estudiante>)myQuery.getResultList();
+	}
+
+	@Override
+	public List<Estudiante> buscarPorEdadNative(Integer edad) {
+		// TODO Auto-generated method stub
+		Query myQuery =this.entityManager.createNativeQuery("SELECT * FROM estudiante  WHERE estu_edad = :datoEdad ORDER BY estu_apellido",Estudiante.class);
+		myQuery.setParameter("datoEdad", edad);
+		return (List<Estudiante>)myQuery.getResultList();
+	}
+
+	@Override
+	public Estudiante buscarPorNumTelefonoNamedNative(String numero) {
+		// TODO Auto-generated method stub
+		TypedQuery<Estudiante> myQuery =this.entityManager.createNamedQuery("Estudiante.buscarPorNumTelefonoNative",Estudiante.class);
+		myQuery.setParameter("datoTelefono", numero);
+		return myQuery.getSingleResult();
+	}
+
+	@Override
+	public Estudiante buscarIdApellidoNamedNative(Integer id, String apellido) {
+		// TODO Auto-generated method stub
+		TypedQuery<Estudiante> myQuery =this.entityManager.createNamedQuery("Estudiante.buscarPorIDApellidoNative",Estudiante.class);
+		myQuery.setParameter("datoId", id);
+		myQuery.setParameter("datoApellido", apellido);
+		return myQuery.getSingleResult();
+	}
+
 	
 
 }

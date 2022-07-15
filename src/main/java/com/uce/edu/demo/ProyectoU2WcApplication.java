@@ -43,17 +43,28 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-	
-		//NATIVE QUERY
-		Persona per2 = this.iPersonaJpaService.buscarPorCedulaNative("2394864");
-		Logg.info("Persona Native: "+per2);
-	
-		Persona per3 = this.iPersonaJpaService.buscarPorCedulaNamedNative("23123455");
-		Logg.info("Persona NamedNative: "+per3);
-	
-		Persona per4 = this.iPersonaJpaService.buscarPorCedulaCriteriaApi("1123455");
-		Logg.info("Persona CriteriaApi: "+per4);
-
+		
+		//Native Query
+		List<Estudiante> listaEstu = this.iEstudianteJpaService.buscarPorNombreNative("Marco");
+		for(Estudiante item:listaEstu) {
+			Logg.info("Estudiante nombreNative: "+item);
+		}
+		Logg.info("\n");
+		
+		List<Estudiante> listaEstu2 = this.iEstudianteJpaService.buscarPorEdadNative(18);
+		for(Estudiante item:listaEstu2) {
+			Logg.info("Estudiante edadNative: "+item);
+		}
+		Logg.info("\n");
+		
+		//Named Native Query
+		Estudiante estu2 = this.iEstudianteJpaService.buscarPorNumTelefonoNamedNative("09321663321");
+		Logg.info("Telefono NamedNative: "+estu2+"\n");
+		
+		Estudiante estu3 = this.iEstudianteJpaService.buscarIdApellidoNamedNative(3, "Diaz");
+		Logg.info("id y apellido NamedNative: "+estu3);
+		
+		Logg.info("\n");
 	}
 
 		
