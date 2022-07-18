@@ -7,3 +7,27 @@
 2022-07-15 20:01:06 INFO  ProyectoU2WcApplication:59 - Persona Dinamica: Persona [id = 13, nombre = Vale, apellido = Salinas, genero = F, cedula = 174353699]
 2022-07-15 20:01:06 INFO  ProyectoU2WcApplication:61 - 
 
+2022-07-18 14:33:52 INFO  ProyectoU2WcApplication:60 - Estudiante CriteriaAPI: Estudiante [id = 2, nombre = Jeff, apellido = Satur, edad = 23, numeroTelefono = 0120483402941]
+2022-07-18 15:43:33 INFO  ProyectoU2WcApplication:62 - Estudiante CriteriaAPI: Estudiante [id = 2, nombre = Jeff, apellido = Satur, edad = 23, numeroTelefono = 0120483402941]
+2022-07-18 15:43:33 INFO  ProyectoU2WcApplication:67 - [Estudiante [id = 4, nombre = Sofia, apellido = Salas, edad = 19, numeroTelefono = 0098823441], Estudiante [id = 5, nombre = Sofia, apellido = Salina, edad = 19, numeroTelefono = 0040593441], Estudiante [id = 6, nombre = Jessie, apellido = Satur, edad = 21, numeroTelefono = 004052232401]]
+2022-07-18 15:46:26 INFO  ProyectoU2WcApplication:62 - Estudiante CriteriaAPI: Estudiante [id = 2, nombre = Jeff, apellido = Satur, edad = 23, numeroTelefono = 0120483402941]
+2022-07-18 15:46:26 INFO  ProyectoU2WcApplication:68 - Estudiante Dinamica: Estudiante [id = 4, nombre = Sofia, apellido = Salas, edad = 19, numeroTelefono = 0098823441]
+2022-07-18 15:46:26 INFO  ProyectoU2WcApplication:68 - Estudiante Dinamica: Estudiante [id = 5, nombre = Sofia, apellido = Salina, edad = 19, numeroTelefono = 0040593441]
+2022-07-18 15:46:26 INFO  ProyectoU2WcApplication:68 - Estudiante Dinamica: Estudiante [id = 6, nombre = Jessie, apellido = Satur, edad = 21, numeroTelefono = 004052232401]
+2022-07-18 15:48:13 INFO  ProyectoU2WcApplication:69 - Estudiante CriteriaAPI: Estudiante [id = 2, nombre = Jeff, apellido = Satur, edad = 23, numeroTelefono = 0120483402941]
+2022-07-18 15:48:13 INFO  ProyectoU2WcApplication:75 - Estudiante Dinamica: Estudiante [id = 4, nombre = Sofia, apellido = Salas, edad = 19, numeroTelefono = 0098823441]
+2022-07-18 15:48:13 INFO  ProyectoU2WcApplication:75 - Estudiante Dinamica: Estudiante [id = 5, nombre = Sofia, apellido = Salina, edad = 19, numeroTelefono = 0040593441]
+2022-07-18 15:48:13 INFO  ProyectoU2WcApplication:75 - Estudiante Dinamica: Estudiante [id = 6, nombre = Jessie, apellido = Satur, edad = 21, numeroTelefono = 004052232401]
+2022-07-18 15:48:13 INFO  ProyectoU2WcApplication:75 - Estudiante Dinamica: Estudiante [id = 7, nombre = Carlos, apellido = Alvear, edad = 21, numeroTelefono = 09877711]
+2022-07-18 15:58:55 INFO  ProyectoU2WcApplication:46 - Estudiante CriteriaAPI: Estudiante [id = 2, nombre = Jeff, apellido = Satur, edad = 23, numeroTelefono = 0120483402941]
+2022-07-18 15:58:55 INFO  ProyectoU2WcApplication:52 - Estudiante Dinamica: Estudiante [id = 4, nombre = Sofia, apellido = Salas, edad = 19, numeroTelefono = 0098823441]
+2022-07-18 15:58:55 INFO  ProyectoU2WcApplication:52 - Estudiante Dinamica: Estudiante [id = 5, nombre = Sofia, apellido = Salina, edad = 19, numeroTelefono = 0040593441]
+2022-07-18 15:58:55 INFO  ProyectoU2WcApplication:52 - Estudiante Dinamica: Estudiante [id = 6, nombre = Jessie, apellido = Satur, edad = 21, numeroTelefono = 004052232401]
+2022-07-18 15:58:55 INFO  ProyectoU2WcApplication:52 - Estudiante Dinamica: Estudiante [id = 7, nombre = Carlos, apellido = Alvear, edad = 21, numeroTelefono = 09877711]
+2022-07-18 15:59:37 INFO  ProyectoU2WcApplication:46 - Estudiante CriteriaAPI: Estudiante [id = 2, nombre = Jeff, apellido = Satur, edad = 23, numeroTelefono = 0120483402941]
+2022-07-18 15:59:37 INFO  ProyectoU2WcApplication:48 - 
+
+2022-07-18 15:59:37 INFO  ProyectoU2WcApplication:54 - Estudiante Dinamica: Estudiante [id = 4, nombre = Sofia, apellido = Salas, edad = 19, numeroTelefono = 0098823441]
+2022-07-18 15:59:37 INFO  ProyectoU2WcApplication:54 - Estudiante Dinamica: Estudiante [id = 5, nombre = Sofia, apellido = Salina, edad = 19, numeroTelefono = 0040593441]
+2022-07-18 15:59:37 INFO  ProyectoU2WcApplication:54 - Estudiante Dinamica: Estudiante [id = 6, nombre = Jessie, apellido = Satur, edad = 21, numeroTelefono = 004052232401]
+2022-07-18 15:59:37 INFO  ProyectoU2WcApplication:54 - Estudiante Dinamica: Estudiante [id = 7, nombre = Carlos, apellido = Alvear, edad = 21, numeroTelefono = 09877711]

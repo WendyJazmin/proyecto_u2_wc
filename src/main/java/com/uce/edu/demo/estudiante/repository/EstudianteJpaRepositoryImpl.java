@@ -6,6 +6,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
@@ -123,6 +127,50 @@ public class EstudianteJpaRepositoryImpl implements IEstudianteJpaRepository {
 		return myQuery.getSingleResult();
 	}
 
+	@Override
+	public Estudiante buscarPorNumTelefonoCriteriaApi(String numero) {
+		// TODO Auto-generated method stub
+		//Creamos una instancia de la interfsaz CriteriaBuilder Fabrica para construir eñ SQL
+		CriteriaBuilder myBuilder = this.entityManager.getCriteriaBuilder();
+		
+		//Especificamos el retorno de mi SQL
+		CriteriaQuery<Estudiante> myQuery = myBuilder.createQuery(Estudiante.class);
+		
+		//Aqui se empieza a construir el SQL
+		//Root FROM
+		Root<Estudiante> estudianteFrom = myQuery.from(Estudiante.class);
+		
+		//las condiciones where en criteria API se los conoce como predicados
+		Predicate p1 = myBuilder.equal(estudianteFrom.get("numeroTelefono"), numero);//e.numeroTelefono = :datoTelefono
+				
+		CriteriaQuery<Estudiante> myQueryCompleto = myQuery.select(estudianteFrom).where(p1);
+		//Finalizado mi Query Completo
+		
+		TypedQuery<Estudiante> myQueryFinal = this.entityManager.createQuery(myQueryCompleto);
+		return myQueryFinal.getSingleResult();
+
+	}
+
+	@Override
+	public List<Estudiante> buscarDinamicamente(Integer edad1,Integer edad2) {
+		CriteriaBuilder myCriteria = this.entityManager.getCriteriaBuilder();
+		
+		CriteriaQuery<Estudiante> myQuery = myCriteria.createQuery(Estudiante.class);
+		
+		Root<Estudiante> myTabla =myQuery.from(Estudiante.class);
+		
+
+		Predicate predicadoEdad1 = myCriteria.equal(myTabla.get("edad"), edad1);
+		Predicate predicadoEdad2 = myCriteria.equal(myTabla.get("edad"), edad2);;
+		
+		Predicate miPredicadoFinal = myCriteria.or(predicadoEdad1,predicadoEdad2);
+		
+		myQuery.select(myTabla).where(miPredicadoFinal);
+		
+		TypedQuery<Estudiante> myQueryFinal = this.entityManager.createQuery(myQuery);
+		return (List<Estudiante>)myQueryFinal.getResultList();
+		
+	}
 	
 
 }

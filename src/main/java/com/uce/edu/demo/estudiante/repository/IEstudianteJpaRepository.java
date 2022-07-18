@@ -22,6 +22,11 @@ public interface IEstudianteJpaRepository {
 	
 	public Estudiante buscarPorNumTelefonoNamedNative(String numero);
 	
+	
+	public Estudiante buscarPorNumTelefonoCriteriaApi(String numero);
+	
+	public List<Estudiante> buscarDinamicamente(Integer edad1,Integer edad2);
+	
 	public Estudiante buscarIdApellidoNamedNative(Integer id,String apellido);
 	
 	

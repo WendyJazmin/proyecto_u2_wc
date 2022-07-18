@@ -11,6 +11,9 @@ public interface IEstudianteJpaService {
 	public Estudiante buscarPorTelefonoTyped(String telefono);
 	
 	public List<Estudiante> buscarPorEdadTyped(Integer edad);
+	
+	public List<Estudiante> buscarDinamicamente(Integer edad1,Integer edad2);
+
 
 	public List<Estudiante> buscarPorEdadNamed(Integer edad);
 	
@@ -20,6 +23,9 @@ public interface IEstudianteJpaService {
 	public List<Estudiante> buscarPorEdadNative(Integer edad);
 	
 	public Estudiante buscarPorNumTelefonoNamedNative(String numero);
+	
+	public Estudiante buscarPorNumTelefonoCriteriaApi(String numero);
+
 	
 	public Estudiante buscarIdApellidoNamedNative(Integer id,String apellido);
 	
