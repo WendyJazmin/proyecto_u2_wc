@@ -91,3 +91,13 @@
 2022-07-19 07:09:04 INFO  ProyectoU2WcApplication:61 - EstudianteContadorEdad [edad = 23, cantidad = 2 estudiantes]
 2022-07-19 07:09:04 INFO  ProyectoU2WcApplication:64 - 
 
+2022-07-19 07:34:33 INFO  ProyectoU2WcApplication:51 - EstudianteSecillo [nombre = Dominik, edad = 20]
+2022-07-19 07:34:33 INFO  ProyectoU2WcApplication:51 - EstudianteSecillo [nombre = Sofia, edad = 19]
+2022-07-19 07:34:33 INFO  ProyectoU2WcApplication:51 - EstudianteSecillo [nombre = Sofia, edad = 19]
+2022-07-19 07:34:33 INFO  ProyectoU2WcApplication:54 - 
+
+2022-07-19 07:34:33 INFO  ProyectoU2WcApplication:61 - EstudianteContadorEdad [edad = 19, cantidad = 2 estudiantes]
+2022-07-19 07:34:33 INFO  ProyectoU2WcApplication:61 - EstudianteContadorEdad [edad = 21, cantidad = 2 estudiantes]
+2022-07-19 07:34:33 INFO  ProyectoU2WcApplication:61 - EstudianteContadorEdad [edad = 23, cantidad = 1 estudiantes]
+2022-07-19 07:34:33 INFO  ProyectoU2WcApplication:64 - 
+

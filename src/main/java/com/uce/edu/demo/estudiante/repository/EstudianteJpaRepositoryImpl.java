@@ -110,7 +110,7 @@ public class EstudianteJpaRepositoryImpl implements IEstudianteJpaRepository {
 	@Override
 	public List<EstudianteContadorEdad> consultarCantidadPorEdad() {
 		// TODO Auto-generated method stub
-		TypedQuery<EstudianteContadorEdad> myQuery =this.entityManager.createQuery("SELECT NEW com.uce.edu.demo.estudiante.modelo.EstudianteContadorEdad(e.edad,COUNT(e.edad)) FROM Estudiante e group by e.edad",EstudianteContadorEdad.class);
+		TypedQuery<EstudianteContadorEdad> myQuery =this.entityManager.createQuery("SELECT NEW com.uce.edu.demo.estudiante.modelo.EstudianteContadorEdad(e.edad,COUNT(e.edad)) FROM Estudiante e WHERE e.apellido like 'S%' group by e.edad",EstudianteContadorEdad.class);
 		
 		return myQuery.getResultList();
 	}
