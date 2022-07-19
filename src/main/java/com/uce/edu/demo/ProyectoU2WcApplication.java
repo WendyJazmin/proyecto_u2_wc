@@ -54,7 +54,7 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 		Logg.info("\n");
 		
 		
-		//agrupando a los estudiantes por edad
+		//agrupando a los estudiantes por edad, donde sus apellidos inician con S
 		List<EstudianteContadorEdad> listaCant = this.iEstudianteJpaService.consultarCantidadPorEdad();
 		
 		for(EstudianteContadorEdad item:listaCant) {
