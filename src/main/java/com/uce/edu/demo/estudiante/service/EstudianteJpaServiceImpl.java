@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.uce.edu.demo.estudiante.modelo.Estudiante;
+import com.uce.edu.demo.estudiante.modelo.EstudianteContadorEdad;
+import com.uce.edu.demo.estudiante.modelo.EstudianteSencillo;
 import com.uce.edu.demo.estudiante.repository.IEstudianteJpaRepository;
 import com.uce.edu.demo.repository.modelo.Persona;
 
@@ -114,6 +116,19 @@ public class EstudianteJpaServiceImpl implements IEstudianteJpaService {
 	public List<Estudiante> buscarDinamicamente(Integer edad1, Integer edad2) {
 		// TODO Auto-generated method stub
 		return this.iEstudianteRepository.buscarDinamicamente(edad1, edad2);
+	}
+
+	
+	@Override
+	public List<EstudianteSencillo> buscarPorNombreEdadSencillo(Integer edad) {
+		// TODO Auto-generated method stub
+		return this.iEstudianteRepository.buscarPorNombreEdadSencillo(edad);
+	}
+
+	@Override
+	public List<EstudianteContadorEdad> consultarCantidadPorEdad() {
+		// TODO Auto-generated method stub
+		return this.iEstudianteRepository.consultarCantidadPorEdad();
 	}
 
 

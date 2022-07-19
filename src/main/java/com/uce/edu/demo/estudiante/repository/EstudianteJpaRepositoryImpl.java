@@ -15,6 +15,8 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Repository;
 
 import com.uce.edu.demo.estudiante.modelo.Estudiante;
+import com.uce.edu.demo.estudiante.modelo.EstudianteContadorEdad;
+import com.uce.edu.demo.estudiante.modelo.EstudianteSencillo;
 import com.uce.edu.demo.repository.modelo.Persona;
 
 @Repository
@@ -94,6 +96,26 @@ public class EstudianteJpaRepositoryImpl implements IEstudianteJpaRepository {
 		return miTypedQuery.getResultList();
 	}
 
+	//objeto sencillo
+	@Override
+	public List<EstudianteSencillo> buscarPorNombreEdadSencillo(Integer edad) {
+		// TODO Auto-generated method stub
+		TypedQuery<EstudianteSencillo> myQuery =this.entityManager.createQuery("SELECT NEW com.uce.edu.demo.estudiante.modelo.EstudianteSencillo(e.nombre,e.edad) FROM Estudiante e WHERE e.edad < :datoEdad",EstudianteSencillo.class);
+	
+		myQuery.setParameter("datoEdad", edad);
+		return myQuery.getResultList();
+	}
+	
+	//objeto sencillo
+	@Override
+	public List<EstudianteContadorEdad> consultarCantidadPorEdad() {
+		// TODO Auto-generated method stub
+		TypedQuery<EstudianteContadorEdad> myQuery =this.entityManager.createQuery("SELECT NEW com.uce.edu.demo.estudiante.modelo.EstudianteContadorEdad(e.edad,COUNT(e.edad)) FROM Estudiante e group by e.edad",EstudianteContadorEdad.class);
+		
+		return myQuery.getResultList();
+	}
+
+	
 	@Override
 	public List<Estudiante> buscarPorNombreNative(String nombre) {
 		// TODO Auto-generated method stub
@@ -171,6 +193,9 @@ public class EstudianteJpaRepositoryImpl implements IEstudianteJpaRepository {
 		return (List<Estudiante>)myQueryFinal.getResultList();
 		
 	}
+
+	
+
 	
 
 }

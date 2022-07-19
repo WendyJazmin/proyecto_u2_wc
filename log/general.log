@@ -42,3 +42,52 @@
 2022-07-18 20:01:13 INFO  ProyectoU2WcApplication:75 - PersonaSencilla: PersonaSencilla [nombre=Tom, apellido=Velez]
 2022-07-18 20:01:13 INFO  ProyectoU2WcApplication:82 - PersonaContador: PersonaContadorGenero [genero=M, numero=4]
 2022-07-18 20:01:13 INFO  ProyectoU2WcApplication:82 - PersonaContador: PersonaContadorGenero [genero=F, numero=3]
+2022-07-19 05:50:24 INFO  ProyectoU2WcApplication:75 - PersonaSencilla: PersonaSencilla [nombre=Daniel, apellido=Velez]
+2022-07-19 05:50:24 INFO  ProyectoU2WcApplication:75 - PersonaSencilla: PersonaSencilla [nombre=Sara, apellido=Velez]
+2022-07-19 05:50:24 INFO  ProyectoU2WcApplication:75 - PersonaSencilla: PersonaSencilla [nombre=Tom, apellido=Velez]
+2022-07-19 05:50:24 INFO  ProyectoU2WcApplication:82 - PersonaContador: PersonaContadorGenero [genero=M, numero=4]
+2022-07-19 05:50:24 INFO  ProyectoU2WcApplication:82 - PersonaContador: PersonaContadorGenero [genero=F, numero=3]
+2022-07-19 06:15:25 INFO  ProyectoU2WcApplication:63 - EstudianteSencillo: EstudianteSecillo [nombre = Dominik, edad = 20]
+2022-07-19 06:15:25 INFO  ProyectoU2WcApplication:63 - EstudianteSencillo: EstudianteSecillo [nombre = Sofia, edad = 19]
+2022-07-19 06:15:25 INFO  ProyectoU2WcApplication:63 - EstudianteSencillo: EstudianteSecillo [nombre = Sofia, edad = 19]
+2022-07-19 06:34:32 INFO  ProyectoU2WcApplication:69 - EstudianteSencillo: EstudianteSecillo [nombre = Dominik, edad = 20]
+2022-07-19 06:34:32 INFO  ProyectoU2WcApplication:69 - EstudianteSencillo: EstudianteSecillo [nombre = Sofia, edad = 19]
+2022-07-19 06:34:32 INFO  ProyectoU2WcApplication:69 - EstudianteSencillo: EstudianteSecillo [nombre = Sofia, edad = 19]
+2022-07-19 06:34:32 INFO  ProyectoU2WcApplication:72 - 
+
+2022-07-19 06:35:57 INFO  ProyectoU2WcApplication:69 - EstudianteSencillo: EstudianteSecillo [nombre = Dominik, edad = 20]
+2022-07-19 06:35:57 INFO  ProyectoU2WcApplication:69 - EstudianteSencillo: EstudianteSecillo [nombre = Sofia, edad = 19]
+2022-07-19 06:35:57 INFO  ProyectoU2WcApplication:69 - EstudianteSencillo: EstudianteSecillo [nombre = Sofia, edad = 19]
+2022-07-19 06:35:57 INFO  ProyectoU2WcApplication:72 - 
+
+2022-07-19 07:03:45 INFO  ProyectoU2WcApplication:74 - Edad: EstudianteContadorEdad [edad = 24, cantidad = 1]
+2022-07-19 07:03:45 INFO  ProyectoU2WcApplication:74 - Edad: EstudianteContadorEdad [edad = 19, cantidad = 2]
+2022-07-19 07:03:45 INFO  ProyectoU2WcApplication:74 - Edad: EstudianteContadorEdad [edad = 21, cantidad = 4]
+2022-07-19 07:03:45 INFO  ProyectoU2WcApplication:74 - Edad: EstudianteContadorEdad [edad = 20, cantidad = 1]
+2022-07-19 07:03:45 INFO  ProyectoU2WcApplication:74 - Edad: EstudianteContadorEdad [edad = 23, cantidad = 2]
+2022-07-19 07:03:45 INFO  ProyectoU2WcApplication:77 - 
+
+2022-07-19 07:06:08 INFO  ProyectoU2WcApplication:51 - EstudianteSencillo: EstudianteSecillo [nombre = Dominik, edad = 20]
+2022-07-19 07:06:08 INFO  ProyectoU2WcApplication:51 - EstudianteSencillo: EstudianteSecillo [nombre = Sofia, edad = 19]
+2022-07-19 07:06:08 INFO  ProyectoU2WcApplication:51 - EstudianteSencillo: EstudianteSecillo [nombre = Sofia, edad = 19]
+2022-07-19 07:06:08 INFO  ProyectoU2WcApplication:54 - 
+
+2022-07-19 07:06:08 INFO  ProyectoU2WcApplication:61 - Edad: EstudianteContadorEdad [edad = 24, cantidad = 1 estudiantes]
+2022-07-19 07:06:08 INFO  ProyectoU2WcApplication:61 - Edad: EstudianteContadorEdad [edad = 19, cantidad = 2 estudiantes]
+2022-07-19 07:06:08 INFO  ProyectoU2WcApplication:61 - Edad: EstudianteContadorEdad [edad = 21, cantidad = 4 estudiantes]
+2022-07-19 07:06:08 INFO  ProyectoU2WcApplication:61 - Edad: EstudianteContadorEdad [edad = 20, cantidad = 1 estudiantes]
+2022-07-19 07:06:08 INFO  ProyectoU2WcApplication:61 - Edad: EstudianteContadorEdad [edad = 23, cantidad = 2 estudiantes]
+2022-07-19 07:06:08 INFO  ProyectoU2WcApplication:64 - 
+
+2022-07-19 07:09:04 INFO  ProyectoU2WcApplication:51 - EstudianteSecillo [nombre = Dominik, edad = 20]
+2022-07-19 07:09:04 INFO  ProyectoU2WcApplication:51 - EstudianteSecillo [nombre = Sofia, edad = 19]
+2022-07-19 07:09:04 INFO  ProyectoU2WcApplication:51 - EstudianteSecillo [nombre = Sofia, edad = 19]
+2022-07-19 07:09:04 INFO  ProyectoU2WcApplication:54 - 
+
+2022-07-19 07:09:04 INFO  ProyectoU2WcApplication:61 - EstudianteContadorEdad [edad = 24, cantidad = 1 estudiantes]
+2022-07-19 07:09:04 INFO  ProyectoU2WcApplication:61 - EstudianteContadorEdad [edad = 19, cantidad = 2 estudiantes]
+2022-07-19 07:09:04 INFO  ProyectoU2WcApplication:61 - EstudianteContadorEdad [edad = 21, cantidad = 4 estudiantes]
+2022-07-19 07:09:04 INFO  ProyectoU2WcApplication:61 - EstudianteContadorEdad [edad = 20, cantidad = 1 estudiantes]
+2022-07-19 07:09:04 INFO  ProyectoU2WcApplication:61 - EstudianteContadorEdad [edad = 23, cantidad = 2 estudiantes]
+2022-07-19 07:09:04 INFO  ProyectoU2WcApplication:64 - 
+

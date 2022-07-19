@@ -4,6 +4,8 @@ package com.uce.edu.demo.estudiante.repository;
 import java.util.List;
 
 import com.uce.edu.demo.estudiante.modelo.Estudiante;
+import com.uce.edu.demo.estudiante.modelo.EstudianteContadorEdad;
+import com.uce.edu.demo.estudiante.modelo.EstudianteSencillo;
 
 public interface IEstudianteJpaRepository {
 
@@ -14,6 +16,11 @@ public interface IEstudianteJpaRepository {
 	public List<Estudiante> buscarPorEdadTyped(Integer edad);
 	
 	public List<Estudiante> buscarPorEdadNamed(Integer edad);
+	
+	
+	public List<EstudianteSencillo> buscarPorNombreEdadSencillo(Integer edad);
+	
+	public List<EstudianteContadorEdad> consultarCantidadPorEdad();
 	
 	
 	public List<Estudiante> buscarPorEdadNative(Integer edad);
