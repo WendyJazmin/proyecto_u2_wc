@@ -14,8 +14,10 @@ import com.uce.edu.demo.estudiante.modelo.Estudiante;
 import com.uce.edu.demo.estudiante.service.IEstudianteJpaService;
 
 import com.uce.edu.demo.repository.modelo.Persona;
+import com.uce.edu.demo.repository.modelo.PersonaContadorGenero;
 import com.uce.edu.demo.service.IPersonaJpaService;
 
+import  com.uce.edu.demo.repository.modelo.PersonaSencilla;
 
 
 
@@ -38,22 +40,49 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-
-
 		
-		//Criteria API
-		Estudiante estu1 = this.iEstudianteJpaService.buscarPorNumTelefonoCriteriaApi("0120483402941");
-		Logg.info("Estudiante CriteriaAPI: "+estu1);
+		/*
 		
+		//criteria API
+
+		Persona per4 = this.iPersonaJpaService.buscarPorCedulaCriteriaApi("1123455");
+		Logg.info("Persona CriteriaAPI: "+per4);
 		Logg.info("\n");
-		
-		//buscar dinamicamente
-		List <Estudiante> listaEstu= this.iEstudianteJpaService.buscarDinamicamente(19, 21);//estudiantes de 19 o 21 anios
 
-		for(Estudiante item:listaEstu) {
-			Logg.info("Estudiante Dinamica: "+item);
+		//Buscar Dinamicamente
+
+		Persona per5 = this.iPersonaJpaService.buscarDinamicamente("Pablo", "Perez", "M");
+		Logg.info("Persona Dinamica: "+per5);
+		Logg.info("\n");
+
+		Persona per6 = this.iPersonaJpaService.buscarDinamicamente("Vale", "Salas", "F");
+		Logg.info("Persona Dinamica: "+per6);
+
+		Logg.info("\n");
+
+*/
+		Persona persona = new Persona();
+		persona.setNombre("Tom");
+		persona.setApellido("Velez");
+		persona.setCedula("2323999884");
+		persona.setGenero("M");
+		//this.iPersonaJpaService.guardar(persona);
+		//this.iPersonaJpaService.eliminar(5);
+		
+		List<PersonaSencilla> listaPersona =this.iPersonaJpaService.buscarPorApellidoSencillo("Velez");
+		
+		for(PersonaSencilla item:listaPersona) {
+			Logg.info("PersonaSencilla: "+item);
 		}
 		
+		
+		List<PersonaContadorGenero> listaContador =this.iPersonaJpaService.consultarCantidadPorGenero();
+		
+		for(PersonaContadorGenero item:listaContador) {
+			Logg.info("PersonaContador: "+item);
+		}
+
+	
 	}
 
 		
