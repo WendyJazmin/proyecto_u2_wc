@@ -14,11 +14,12 @@ import com.uce.edu.demo.estudiante.modelo.Estudiante;
 import com.uce.edu.demo.estudiante.modelo.EstudianteContadorEdad;
 import com.uce.edu.demo.estudiante.modelo.EstudianteSencillo;
 import com.uce.edu.demo.estudiante.service.IEstudianteJpaService;
-
+import com.uce.edu.demo.repository.modelo.Ciudadano;
+import com.uce.edu.demo.repository.modelo.Empleado;
 import com.uce.edu.demo.repository.modelo.Persona;
 import com.uce.edu.demo.repository.modelo.PersonaContadorGenero;
 import com.uce.edu.demo.service.IPersonaJpaService;
-
+import com.uce.edu.demo.service.ICiudadanoService;
 import  com.uce.edu.demo.repository.modelo.PersonaSencilla;
 
 
@@ -33,6 +34,9 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 	@Autowired
 	private IEstudianteJpaService iEstudianteJpaService;
 	
+	@Autowired
+	private ICiudadanoService ICiudadanoService;
+	
 	private static Logger Logg = Logger.getLogger(ProyectoU2WcApplication.class);
 
 	
@@ -43,23 +47,18 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		Ciudadano ciu1 = new Ciudadano();
+		ciu1.setNombre("Milena");
+		ciu1.setApellido("Perez");
 		
-		//buscando estudiantes menores de 21 anios
-		List<EstudianteSencillo> listaEstudiante =this.iEstudianteJpaService.buscarPorNombreEdadSencillo(21);
+		Empleado empl1 = new Empleado();
+		empl1.setCodigoIess("122711");
+		empl1.setSalario(new BigDecimal(100));
+		empl1.setCiudadano(ciu1);
 		
-		for(EstudianteSencillo item:listaEstudiante) {
-			Logg.info(item);
-		}
+		ciu1.setEmpleado(empl1);
 		
-		Logg.info("\n");
-		
-		
-		//agrupando a los estudiantes por edad, donde sus apellidos inician con S
-		List<EstudianteContadorEdad> listaCant = this.iEstudianteJpaService.consultarCantidadPorEdad();
-		
-		for(EstudianteContadorEdad item:listaCant) {
-			Logg.info(item);
-		}
+		this.ICiudadanoService.insertar(ciu1);
 		
 		Logg.info("\n");
 		
