@@ -22,8 +22,12 @@ import com.uce.edu.demo.repository.modelo.Persona;
 import com.uce.edu.demo.repository.modelo.PersonaContadorGenero;
 import com.uce.edu.demo.service.IPersonaJpaService;
 import com.uce.edu.demo.service.ICiudadanoService;
+import com.uce.edu.demo.service.IHabitacionService;
+import com.uce.edu.demo.service.IHotelService;
 import com.uce.edu.demo.ciudadano.service.ICiudadanosService;
 import  com.uce.edu.demo.repository.modelo.PersonaSencilla;
+import com.uce.edu.demo.repository.modelo.onetomany.Habitacion;
+import com.uce.edu.demo.repository.modelo.onetomany.Hotel;
 
 
 
@@ -43,6 +47,12 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 	@Autowired
 	private ICiudadanosService ICiudadanosService;
 	
+	@Autowired
+	private IHotelService ihotelervice;
+	
+	@Autowired
+	private IHabitacionService ihabitacionervice;
+	
 	private static Logger Logg = Logger.getLogger(ProyectoU2WcApplication.class);
 
 	
@@ -53,47 +63,24 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		//INSERTAR
-		Ciudadanos ciu1 = new Ciudadanos();
-		ciu1.setNombre("Jessie");
-		ciu1.setApellido("Satur");
-		ciu1.setCedula("1556473236");
-		ciu1.setFechaNacimiento(LocalDateTime.now());
-		
-		Pasaporte pasaporte = new Pasaporte();
-		pasaporte.setFechaCaducidad(LocalDateTime.of(2030, 1, 20, 12, 20));
-		pasaporte.setFechaEmision(LocalDateTime.now());
-		pasaporte.setNumero("3322944557");
-		pasaporte.setCiudadano(ciu1);
-		
-		ciu1.setPasaporte(pasaporte);
-		
-		this.ICiudadanosService.insertar(ciu1);
-		
-		
-		
-		Logg.info("\n");
-		
-		//BUSCAR
-		Ciudadanos ciudadano = this.ICiudadanosService.buscar(4);
-		Logg.info(ciudadano+"\n");
-		
-		//ACTUALIZAR
-		Ciudadanos ciudadano2 = new Ciudadanos();
-		ciudadano2.setId(8);
-		ciudadano2.setApellido("Perez");
-		ciudadano2.setCedula("11213447");
-		ciudadano2.setFechaNacimiento(LocalDateTime.of(2022,7,22,9,19,19));
-		ciudadano2.setNombre("Daniela");
-		this.ICiudadanosService.actualizar(ciudadano2);
-		Logg.info("\n");
-		
-		
-		//ELIMINAR
-		this.ICiudadanosService.eliminar(9);
-		
-		Logg.info("\n");
-		
+	Hotel hotel = new Hotel();
+	hotel.setDireccion("Av. 6 de Diciembre");
+	hotel.setNombre("Domundi");
+	this.ihotelervice.insertar(hotel);
+	
+	Hotel hotel1 = new Hotel();
+	hotel1.setId(1);
+	
+	
+	Habitacion habitacion = new Habitacion();
+	habitacion.setNumero("A36");
+	habitacion.setPiso("9");
+	habitacion.setTipo("Individual");
+
+	habitacion.setHotel(hotel1);
+	
+	this.ihabitacionervice.insertar(habitacion);
+	
 	}
 
 		
