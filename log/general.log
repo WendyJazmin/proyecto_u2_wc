@@ -1,39 +1,25 @@
-2022-07-19 19:57:20 INFO  ProyectoU2WcApplication:63 - 
 
-2022-07-22 08:54:25 INFO  ProyectoU2WcApplication:74 - 
 
-2022-07-22 09:12:53 INFO  ProyectoU2WcApplication:74 - 
 
-2022-07-22 09:14:02 INFO  ProyectoU2WcApplication:74 - 
+2022-07-25 14:05:14 INFO  ProyectoU2WcApplication:120 - Autor [id=1, nombre=Jeff, apellido=Satur, edad=27, paisOrigen=Tailandia, genero=M]
 
-2022-07-22 09:15:05 INFO  ProyectoU2WcApplication:74 - 
+2022-07-25 14:05:14 INFO  ProyectoU2WcApplication:131 - 
 
-2022-07-22 09:19:19 INFO  ProyectoU2WcApplication:75 - 
+2022-07-25 14:07:32 INFO  ProyectoU2WcApplication:120 - Autor [id=1, nombre=Jeff, apellido=Satur, edad=27, paisOrigen=Tailandia, genero=M]
 
-2022-07-22 09:19:19 INFO  ProyectoU2WcApplication:79 - com.uce.edu.demo.ciudadano.modelo.Ciudadanos@301fd21f
-2022-07-22 09:21:28 INFO  ProyectoU2WcApplication:75 - 
+2022-07-25 14:07:32 INFO  ProyectoU2WcApplication:131 - 
 
-2022-07-22 09:22:31 INFO  ProyectoU2WcApplication:75 - 
+2022-07-25 14:09:03 INFO  ProyectoU2WcApplication:120 - Autor [id=1, nombre=Jeff, apellido=Satur, edad=27, paisOrigen=Tailandia, genero=M]
 
-2022-07-22 09:30:52 INFO  ProyectoU2WcApplication:75 - 
+2022-07-25 14:09:03 INFO  ProyectoU2WcApplication:131 - 
 
-2022-07-22 09:30:52 INFO  ProyectoU2WcApplication:79 - Ciudadanos [id=4, nombre=Milena, apellido=Perez, cedula=13243577, fechaNacimiento=2022-07-22T08:54:25.766680, pasaporte=com.uce.edu.demo.ciudadano.modelo.Pasaporte@9964964]
-2022-07-22 09:31:54 INFO  ProyectoU2WcApplication:75 - 
+2022-07-25 14:11:33 INFO  ProyectoU2WcApplication:120 - Autor [id=1, nombre=Jeff, apellido=Satur, edad=27, paisOrigen=Tailandia, genero=M]
 
-2022-07-22 09:31:54 INFO  ProyectoU2WcApplication:79 - Ciudadanos [id=4, nombre=Milena, apellido=Perez, cedula=13243577, fechaNacimiento=2022-07-22T08:54:25.766680, pasaporte=Pasaporte [id=1, numero=1929218337, fechaEmision=2022-07-22T08:54:25.766680, fechaCaducidad=2028-09-16T09:30]]
-2022-07-22 09:38:49 INFO  ProyectoU2WcApplication:75 - 
+2022-07-25 14:11:33 INFO  ProyectoU2WcApplication:131 - 
 
-2022-07-22 09:38:49 INFO  ProyectoU2WcApplication:79 - Ciudadanos [id=4, nombre=Milena, apellido=Perez, cedula=13243577, fechaNacimiento=2022-07-22T08:54:25.766680, pasaporte=Pasaporte [id=1, numero=1929218337, fechaEmision=2022-07-22T08:54:25.766680, fechaCaducidad=2028-09-16T09:30]]
-2022-07-22 09:52:06 INFO  ProyectoU2WcApplication:75 - 
+2022-07-25 14:14:30 INFO  ProyectoU2WcApplication:85 - 
 
-2022-07-22 09:52:06 INFO  ProyectoU2WcApplication:79 - Ciudadanos [id=4, nombre=Milena, apellido=Perez, cedula=13243577, fechaNacimiento=2022-07-22T08:54:25.766680, pasaporte=Pasaporte [id=1, numero=1929218337, fechaEmision=2022-07-22T08:54:25.766680, fechaCaducidad=2028-09-16T09:30]]
-2022-07-22 09:56:06 INFO  ProyectoU2WcApplication:75 - 
+2022-07-25 14:14:30 INFO  ProyectoU2WcApplication:104 - Autor [id=1, nombre=Jeff, apellido=Satur, edad=27, paisOrigen=Tailandia, genero=M]
 
-2022-07-22 09:59:17 INFO  ProyectoU2WcApplication:75 - 
-
-2022-07-22 09:59:17 INFO  ProyectoU2WcApplication:79 - Ciudadanos [id=4, nombre=Milena, apellido=Perez, cedula=13243577, fechaNacimiento=2022-07-22T08:54:25.766680, pasaporte=Pasaporte [id=1, numero=1929218337, fechaEmision=2022-07-22T08:54:25.766680, fechaCaducidad=2028-09-16T09:30]]
-
-2022-07-22 09:59:17 INFO  ProyectoU2WcApplication:89 - 
-
-2022-07-22 09:59:17 INFO  ProyectoU2WcApplication:95 - 
+2022-07-25 14:14:30 INFO  ProyectoU2WcApplication:116 - 
 
