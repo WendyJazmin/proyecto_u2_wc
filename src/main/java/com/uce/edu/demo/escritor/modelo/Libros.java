@@ -11,8 +11,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name= "libro")
-public class Libro {
+@Table(name= "libros")
+public class Libros {
 	
 	@Id
 	@Column(name = "libr_id")
@@ -37,7 +37,7 @@ public class Libro {
 
 	@ManyToOne
 	@JoinColumn(name = "libr_id_autor")
-	private Autor autor;
+	private Autors autor;
 	
 	
 
@@ -96,11 +96,11 @@ public class Libro {
 		this.editorial = editorial;
 	}
 
-	public Autor getAutor() {
+	public Autors getAutor() {
 		return autor;
 	}
 
-	public void setAutor(Autor autor) {
+	public void setAutor(Autors autor) {
 		this.autor = autor;
 	}
 	

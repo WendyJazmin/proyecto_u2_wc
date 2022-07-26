@@ -12,8 +12,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name= "autor")
-public class Autor {
+@Table(name= "autors")
+public class Autors {
 
 	@Id
 	@Column(name = "auto_id")
@@ -37,7 +37,7 @@ public class Autor {
 	private String genero;
 
 	@OneToMany(mappedBy = "autor")
-	private List<Libro> libros;
+	private List<Libros> libros;
 	
 	
 	
@@ -97,11 +97,11 @@ public class Autor {
 		this.genero = genero;
 	}
 
-	public List<Libro> getLibros() {
+	public List<Libros> getLibros() {
 		return libros;
 	}
 
-	public void setLibros(List<Libro> libros) {
+	public void setLibros(List<Libros> libros) {
 		this.libros = libros;
 	}
 	

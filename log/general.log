@@ -23,3 +23,15 @@
 
 2022-07-25 14:14:30 INFO  ProyectoU2WcApplication:116 - 
 
+2022-07-25 16:01:30 INFO  ProyectoU2WcApplication:85 - 
+
+2022-07-25 16:01:30 INFO  ProyectoU2WcApplication:104 - Autor [id=1, nombre=Jeff, apellido=Satur, edad=27, paisOrigen=Tailandia, genero=M]
+
+2022-07-25 16:01:30 INFO  ProyectoU2WcApplication:116 - 
+
+2022-07-25 16:03:38 INFO  ProyectoU2WcApplication:85 - 
+
+2022-07-25 16:03:38 INFO  ProyectoU2WcApplication:104 - Autor [id=1, nombre=Jeff, apellido=Satur, edad=27, paisOrigen=Tailandia, genero=M]
+
+2022-07-25 16:03:38 INFO  ProyectoU2WcApplication:116 - 
+

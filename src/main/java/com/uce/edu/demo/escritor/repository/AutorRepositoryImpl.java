@@ -6,7 +6,7 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
-import com.uce.edu.demo.escritor.modelo.Autor;
+import com.uce.edu.demo.escritor.modelo.Autors;
 
 @Repository
 @Transactional
@@ -16,19 +16,19 @@ public class AutorRepositoryImpl implements IAutorRepository {
 	private EntityManager entityManager;
 	
 	@Override
-	public void insertar(Autor autor) {
+	public void insertar(Autors autor) {
 		// TODO Auto-generated method stub
 		this.entityManager.persist(autor);
 	}
 
 	@Override
-	public Autor buscar(Integer id) {
+	public Autors buscar(Integer id) {
 		// TODO Auto-generated method stub
-		return this.entityManager.find(Autor.class, id);
+		return this.entityManager.find(Autors.class, id);
 	}
 
 	@Override
-	public void actualizar(Autor autor) {
+	public void actualizar(Autors autor) {
 		// TODO Auto-generated method stub
 		this.entityManager.merge(autor);
 	}
@@ -36,7 +36,7 @@ public class AutorRepositoryImpl implements IAutorRepository {
 	@Override
 	public void eliminar(Integer id) {
 		// TODO Auto-generated method stub
-		Autor autor = this.buscar(id);
+		Autors autor = this.buscar(id);
 		this.entityManager.remove(autor);
 		
 	}

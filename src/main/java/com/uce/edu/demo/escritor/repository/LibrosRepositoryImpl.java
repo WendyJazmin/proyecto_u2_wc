@@ -6,29 +6,29 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
-import com.uce.edu.demo.escritor.modelo.Libro;
+import com.uce.edu.demo.escritor.modelo.Libros;
 
 @Repository
 @Transactional
-public class LibroRepositoryImpl implements ILibroRepository {
+public class LibrosRepositoryImpl implements ILibrosRepository {
 
 	@PersistenceContext
 	private EntityManager entityManager;
 	
 	@Override
-	public void insertar(Libro libro) {
+	public void insertar(Libros libro) {
 		// TODO Auto-generated method stub
 		this.entityManager.persist(libro);
 	}
 
 	@Override
-	public Libro buscar(Integer id) {
+	public Libros buscar(Integer id) {
 		// TODO Auto-generated method stub
-		return this.entityManager.find(Libro.class, id);
+		return this.entityManager.find(Libros.class, id);
 	}
 
 	@Override
-	public void actualizar(Libro libro) {
+	public void actualizar(Libros libro) {
 		// TODO Auto-generated method stub
 		this.entityManager.merge(libro);
 	}
@@ -36,7 +36,7 @@ public class LibroRepositoryImpl implements ILibroRepository {
 	@Override
 	public void eliminar(Integer id) {
 		// TODO Auto-generated method stub
-		Libro libro = this.buscar(id);
+		Libros libro = this.buscar(id);
 		this.entityManager.remove(libro);
 	}
 

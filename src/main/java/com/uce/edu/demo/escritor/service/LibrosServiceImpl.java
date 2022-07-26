@@ -3,27 +3,27 @@ package com.uce.edu.demo.escritor.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.uce.edu.demo.escritor.modelo.Libro;
-import com.uce.edu.demo.escritor.repository.ILibroRepository;
+import com.uce.edu.demo.escritor.modelo.Libros;
+import com.uce.edu.demo.escritor.repository.ILibrosRepository;
 
 @Service
-public class LibroServiceImpl implements ILibroService{
+public class LibrosServiceImpl implements ILibrosService{
 
 	@Autowired
-	private ILibroRepository iLibroRepository;
+	private ILibrosRepository iLibroRepository;
 	
 	@Override
-	public void insertar(Libro libro) {
+	public void insertar(Libros libro) {
 		// TODO Auto-generated method stub
 		this.iLibroRepository.insertar(libro);
 	}
 	@Override
-	public Libro buscar(Integer id) {
+	public Libros buscar(Integer id) {
 		// TODO Auto-generated method stub
 		return this.iLibroRepository.buscar(id);
 	}
 	@Override
-	public void actualizar(Libro libro) {
+	public void actualizar(Libros libro) {
 		// TODO Auto-generated method stub
 		this.iLibroRepository.actualizar(libro);
 	}
