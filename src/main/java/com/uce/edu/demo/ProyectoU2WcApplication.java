@@ -14,6 +14,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.uce.edu.demo.cajero.repository.modelo.DetalleFactura;
+import com.uce.edu.demo.cajero.repository.modelo.Factura;
+import com.uce.edu.demo.cajero.service.IFacturaService;
 import com.uce.edu.demo.ciudadano.modelo.Ciudadanos;
 import com.uce.edu.demo.ciudadano.modelo.Pasaporte;
 import com.uce.edu.demo.estudiante.modelo.Estudiante;
@@ -50,6 +53,9 @@ import com.uce.edu.demo.repository.modelo.onetomany.Libro2_Autor2;
 @SpringBootApplication
 public class ProyectoU2WcApplication implements CommandLineRunner{
 
+	@Autowired
+	private IFacturaService iFacturaService;
+	
 	@Autowired
 	private ILibro2Service iLibro2Service;
 	
@@ -90,84 +96,18 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		//INSERTAR LIBRO2
-		Libro2 libro1 = new Libro2();
-		libro1.setTitulo("Escarabajo");
-		libro1.setCantidadPaginas("400");
+		Factura fact = this.iFacturaService.consultar(1);
+		Logg.info(fact.getNumero());
+		Logg.info("fecha: "+fact.getFecha());
 		
-		Libro2 libro3 = new Libro2();
-		libro3.setTitulo("Fabulas de Esopo");
-		libro3.setCantidadPaginas("550");
+		Logg.info("Cliente: "+fact.getCliente().getNumeroTarjeta());
 		
-		Libro2 libro6 = new Libro2();
-		libro6.setTitulo("Amigos");
-		libro6.setCantidadPaginas("600");
-		
-		//this.iLibro2Service.insertar(libro1);
-		//this.iLibro2Service.insertar(libro3);
-		//this.iLibro2Service.insertar(libro6);
-		
-		
-		//INSERTAR AUTOR2
-		Autor2 autor1 = new Autor2();
-		autor1.setName("Rafael Vegas");
-		
-		Autor2 autor2 = new Autor2();
-		autor2.setName("Marlon Perez");
-		
-		
-		Autor2 autor6 = new Autor2();
-		autor6.setName("Daniel Naranjo");
-		
-		//this.iAutor2Service.insertar(autor1);
-		//this.iAutor2Service.insertar(autor2);
-		//this.iAutor2Service.insertar(autor6);
-		
-		
-		
-		
-		// 1 libro tiene 2 autores
-		Libro2 libro2 = new Libro2();
-		libro2.setId(24);
-		
-		Autor2 autor3 = new Autor2();
-		autor3.setId(24);
-		
-		
-		Autor2 autor4 = new Autor2();
-		autor4.setId(25);
-		
-		Libro2_Autor2 Libro2_Autor2  = new Libro2_Autor2 ();
-		Libro2_Autor2.setLibro2(libro2);
-		Libro2_Autor2.setAutor2(autor4);
-		
-		//this.ILibro2_Autor2Service.insertar(Libro2_Autor2);
-		
-		
-		
-		
-		// 1 autor escribio 2 libros
-		Autor2 autor5 = new Autor2();
-		autor5.setId(23);
+		List<DetalleFactura> detalles = fact.getDetalles();
+		for(DetalleFactura deta: detalles) {
+			Logg.info("Detalles: "+deta);
+		}
 	
-		Libro2 libro4 = new Libro2();
-		libro4.setId(25);
-		
-		Libro2 libro5 = new Libro2();
-		libro5.setId(26);
-		
-		Libro2_Autor2 Libro2_Autor2_2  = new Libro2_Autor2 ();
-		Libro2_Autor2_2.setLibro2(libro5);
-		Libro2_Autor2_2.setAutor2(autor5);
-		
-		this.ILibro2_Autor2Service.insertar(Libro2_Autor2_2);
-		
-	
-		
 	}
 
-
-	
-	
 		
 }
