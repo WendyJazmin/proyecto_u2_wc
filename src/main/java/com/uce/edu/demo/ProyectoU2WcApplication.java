@@ -150,6 +150,7 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 		//this.IVehiculoJpaService.insertarVehiculo(vehi);
 		Vehiculo veh2 = this.IVehiculoJpaService.buscarPorId(1);
 		
+		
 		//INSETANDO MATRICULA
 		Matricula matri = new Matricula();
 		matri.setFechaMatricula(LocalDateTime.now());
@@ -162,9 +163,11 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 		matri.setPropietario(prop1);
 		matri.setVehiculo(vehiculo);
 		
-		this.iMatriculaJpaService.generarMatricula(prop1.getCedula(), veh2.getPlaca());
+		//this.iMatriculaJpaService.generarMatricula(prop1.getCedula(), veh2.getPlaca());
 		
+		Matricula matri2 = this.iMatriculaJpaService.buscar(1);
 		
+		logg.info("\nMatricula encontrada: "+matri2);
 	
 	}
 

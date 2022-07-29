@@ -6,4 +6,5 @@ public interface IMatriculaJpaRepository {
 
 	public void crear(Matricula matricula);
 	
+	public Matricula buscar(Integer id);
 }

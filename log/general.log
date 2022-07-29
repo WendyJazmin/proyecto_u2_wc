@@ -1,1 +1,6 @@
 2022-07-29 16:42:11 INFO  ProyectoU2WcApplication:160 - 23344FVB
+2022-07-29 16:54:53 INFO  ProyectoU2WcApplication:161 - 23344FVB
+2022-07-29 16:54:53 INFO  ProyectoU2WcApplication:170 - Matricula [fechaMatricula = 2022-07-29T16:42:11.202726, valorMatricula = 2697.00, propietario = Propietario [id=1, nombre=Jeff, apellido=Satur, cedula=132455, fechaNacimiento=2022-07-29T15:53:55.005871], vehiculo = Vehiculo [marca=Toyota, placa=23344FVB, tipo=Liviano, precio=29000.00]]
+2022-07-29 16:57:03 INFO  ProyectoU2WcApplication:161 - 23344FVB
+2022-07-29 16:57:03 INFO  ProyectoU2WcApplication:170 - 
+Matricula encontrada: Matricula [fechaMatricula = 2022-07-29T16:42:11.202726, valorMatricula = 2697.00, propietario = Propietario [id=1, nombre=Jeff, apellido=Satur, cedula=132455, fechaNacimiento=2022-07-29T15:53:55.005871], vehiculo = Vehiculo [marca=Toyota, placa=23344FVB, tipo=Liviano, precio=29000.00]]

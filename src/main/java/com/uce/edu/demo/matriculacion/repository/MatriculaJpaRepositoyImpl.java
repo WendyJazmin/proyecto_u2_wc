@@ -21,4 +21,10 @@ public class MatriculaJpaRepositoyImpl implements IMatriculaJpaRepository {
 		this.entityManager.persist(matricula);;
 	}
 
+	@Override
+	public Matricula buscar(Integer id) {
+		// TODO Auto-generated method stub
+		return this.entityManager.find(Matricula.class, id);
+	}
+
 }

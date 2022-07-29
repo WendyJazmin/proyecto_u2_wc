@@ -65,4 +65,11 @@ public class MatriculaGestorServiceImpl implements IMatriculaGestorService {
 		this.iMatriculaRepository.crear(matricula);
 	}
 
+
+	@Override
+	public Matricula buscar(Integer id) {
+		// TODO Auto-generated method stub
+		return this.iMatriculaRepository.buscar(id);
+	}
+
 }
