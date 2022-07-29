@@ -1,12 +1,15 @@
 package com.uce.edu.demo.matriculacion.modelo;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -32,6 +35,11 @@ public class Propietario {
 	@Column(name = "prop_fechaNacimiento")
 	private LocalDateTime fechaNacimiento;
 	
+	@OneToMany(mappedBy = "propietario")
+	private List<Vehiculo> vehiculos;
+
+	@OneToOne(mappedBy = "propietario1")
+	private Matricula matricula;
 	
 	@Override
 	public String toString() {
@@ -79,6 +87,16 @@ public class Propietario {
 
 	public void setFechaNacimiento(LocalDateTime fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
+	}
+
+
+	public List<Vehiculo> getVehiculos() {
+		return vehiculos;
+	}
+
+
+	public void setVehiculos(List<Vehiculo> vehiculos) {
+		this.vehiculos = vehiculos;
 	}
 	
 	

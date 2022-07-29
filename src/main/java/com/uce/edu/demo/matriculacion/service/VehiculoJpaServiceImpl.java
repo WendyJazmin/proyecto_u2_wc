@@ -36,6 +36,12 @@ public class VehiculoJpaServiceImpl implements IVehiculoJpaService{
 		// TODO Auto-generated method stub
 		this.iVehiculoRepository.eliminar(placa);
 	}
+
+	@Override
+	public Vehiculo buscarPorId(Integer id) {
+		// TODO Auto-generated method stub
+		return this.iVehiculoRepository.buscarPorId(id);
+	}
 	
 
 }

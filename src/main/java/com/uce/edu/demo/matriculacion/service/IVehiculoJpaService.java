@@ -4,6 +4,7 @@ import com.uce.edu.demo.matriculacion.modelo.Vehiculo;
 
 public interface IVehiculoJpaService {
 
+	public Vehiculo buscarPorId(Integer id);
 	public void insertarVehiculo(Vehiculo vehiculo);
 
 	public Vehiculo buscarVehiculo(String placa);

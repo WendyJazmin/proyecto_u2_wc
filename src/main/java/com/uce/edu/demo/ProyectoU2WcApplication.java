@@ -23,6 +23,12 @@ import com.uce.edu.demo.estudiante.modelo.Estudiante;
 import com.uce.edu.demo.estudiante.modelo.EstudianteContadorEdad;
 import com.uce.edu.demo.estudiante.modelo.EstudianteSencillo;
 import com.uce.edu.demo.estudiante.service.IEstudianteJpaService;
+import com.uce.edu.demo.matriculacion.modelo.Matricula;
+import com.uce.edu.demo.matriculacion.modelo.Propietario;
+import com.uce.edu.demo.matriculacion.modelo.Vehiculo;
+import com.uce.edu.demo.matriculacion.service.IMatriculaGestorService;
+import com.uce.edu.demo.matriculacion.service.IMatriculaJpaService;
+import com.uce.edu.demo.matriculacion.service.IPropietarioJpaService;
 import com.uce.edu.demo.repository.modelo.Ciudadano;
 import com.uce.edu.demo.repository.modelo.Empleado;
 import com.uce.edu.demo.repository.modelo.Persona;
@@ -35,6 +41,8 @@ import com.uce.edu.demo.service.IHotelService;
 import com.uce.edu.demo.service.ILibro2Service;
 import com.uce.edu.demo.service.ILibroService;
 import com.uce.edu.demo.ciudadano.service.ICiudadanosService;
+
+import com.uce.edu.demo.matriculacion.service.IVehiculoJpaService;
 
 import com.uce.edu.demo.service.ILibro2_Autor2Service;
 
@@ -52,7 +60,16 @@ import com.uce.edu.demo.repository.modelo.onetomany.Libro2_Autor2;
 
 @SpringBootApplication
 public class ProyectoU2WcApplication implements CommandLineRunner{
-
+	
+	@Autowired
+	private IMatriculaGestorService iMatriculaJpaService;
+	
+	@Autowired
+	private IVehiculoJpaService IVehiculoJpaService;
+	
+	@Autowired
+	private IPropietarioJpaService iPropietarioService;
+	
 	@Autowired
 	private IFacturaService iFacturaService;
 	
@@ -86,7 +103,7 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 	@Autowired
 	private IHabitacionService ihabitacionervice;
 	
-	private static Logger Logg = Logger.getLogger(ProyectoU2WcApplication.class);
+	private static Logger logg = Logger.getLogger(ProyectoU2WcApplication.class);
 
 	
 	public static void main(String[] args) {
@@ -96,7 +113,7 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Factura fact = this.iFacturaService.consultar(1);
+		/*Factura fact = this.iFacturaService.consultar(1);
 		Logg.info(fact.getNumero());
 		Logg.info("fecha: "+fact.getFecha());
 		
@@ -106,6 +123,48 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 		for(DetalleFactura deta: detalles) {
 			Logg.info("Detalles: "+deta);
 		}
+		*/
+		
+		//INSERTANDO PROPIETARIO
+		Propietario prop = new Propietario();
+		prop.setNombre("Jesse");
+		prop.setApellido("Salas");
+		prop.setCedula("112324");
+		prop.setFechaNacimiento(LocalDateTime.now());
+		
+		//this.iPropietarioService.crearPropietario(prop);
+		
+		
+		//INSETANDO VEHICULOS
+		Vehiculo vehi = new Vehiculo();
+		vehi.setMarca("Maza");
+		vehi.setPlaca("2312FVB");
+		vehi.setPrecio(new BigDecimal(40000));
+		vehi.setTipo("Liviano");
+		
+		Propietario prop1 = this.iPropietarioService.buscarPorId(1);
+		//prop1.setId(1);
+		
+		vehi.setPropietario(prop1);
+		
+		//this.IVehiculoJpaService.insertarVehiculo(vehi);
+		Vehiculo veh2 = this.IVehiculoJpaService.buscarPorId(1);
+		
+		//INSETANDO MATRICULA
+		Matricula matri = new Matricula();
+		matri.setFechaMatricula(LocalDateTime.now());
+		matri.setValorMatricula(new BigDecimal(120));
+	
+		
+		Vehiculo vehiculo = this.IVehiculoJpaService.buscarVehiculo("23344FVB");
+		logg.info(vehiculo.getPlaca());
+		
+		matri.setPropietario(prop1);
+		matri.setVehiculo(vehiculo);
+		
+		this.iMatriculaJpaService.generarMatricula(prop1.getCedula(), veh2.getPlaca());
+		
+		
 	
 	}
 

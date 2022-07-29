@@ -7,6 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
 
@@ -14,17 +17,16 @@ import javax.persistence.SequenceGenerator;
 @Table(name = "vehiculo")
 public class Vehiculo {
 	
-	//@Id
-	
-	//@Column(name = "vehi_id")
-	//@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "vehi_id_seq")
-	//@SequenceGenerator(name="vehi_id_seq", sequenceName = "vehi_id_seq", allocationSize = 1)
-	//private Integer id;
+	@Id
+	@Column(name = "vehi_id")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "vehi_id_seq")
+	@SequenceGenerator(name="vehi_id_seq", sequenceName = "vehi_id_seq", allocationSize = 1)
+	private Integer id;
 	
 	@Column(name = "vehi_marca")
 	private String marca;
 	
-	@Id
+	
 	@Column(name = "vehi_placa")
 	private String placa;
 	
@@ -34,7 +36,12 @@ public class Vehiculo {
 	@Column(name = "vehi_precio")
 	private BigDecimal precio;
 
+	@ManyToOne
+	@JoinColumn(name="vehi_prop_id")
+	private Propietario propietario;
 	
+	@OneToOne(mappedBy = "vehiculo")
+	private Matricula matricula;
 	
 	@Override
 	public String toString() {
@@ -72,6 +79,22 @@ public class Vehiculo {
 
 	public void setPrecio(BigDecimal precio) {
 		this.precio = precio;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Propietario getPropietario() {
+		return propietario;
+	}
+
+	public void setPropietario(Propietario propietario) {
+		this.propietario = propietario;
 	}
 	
 	

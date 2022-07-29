@@ -8,6 +8,8 @@ public interface IVehiculoJpaRepository {
 
 	public Vehiculo buscar(String placa);
 	
+	public Vehiculo buscarPorId(Integer id);
+	
 	public void actualizar(Vehiculo v);
 	
 	public void eliminar(String placa);

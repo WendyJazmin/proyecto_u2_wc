@@ -48,4 +48,10 @@ public class VehiculoJpaRepositoryImpl implements IVehiculoJpaRepository{
 		this.entityManager.remove(vehiculo);
 	}
 
+	@Override
+	public Vehiculo buscarPorId(Integer id) {
+		// TODO Auto-generated method stub
+		return this.entityManager.find(Vehiculo.class, id);
+	}
+
 }
