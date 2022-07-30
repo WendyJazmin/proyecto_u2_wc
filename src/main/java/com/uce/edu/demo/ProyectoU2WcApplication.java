@@ -55,7 +55,7 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 		doctor1.setTitulo("Medico General");
 		doctor1.setSalario(new BigDecimal(800));
 		
-		//this.iDoctorService.insertar(doctor1);
+		this.iDoctorService.insertar(doctor1);
 		
 		Doctor doctor2 = new Doctor();
 		doctor2.setCedula("1223244");
@@ -66,7 +66,7 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 		doctor2.setTitulo("Dermatologo");
 		doctor2.setSalario(new BigDecimal(1000));
 		
-		//this.iDoctorService.insertar(doctor2);
+		this.iDoctorService.insertar(doctor2);
 		
 		Paciente pac1 = new Paciente();
 		pac1.setCedula("223435");
@@ -78,7 +78,7 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 		pac1.setPeso(76.0);
 		pac1.setGenero("M");
 		
-		//this.IPacienteService.insertar(pac1);
+		this.IPacienteService.insertar(pac1);
 		
 		Paciente pac2 = new Paciente();
 		pac2.setCedula("21221235");
@@ -90,7 +90,7 @@ public class ProyectoU2WcApplication implements CommandLineRunner{
 		pac2.setPeso(56.0);
 		pac1.setGenero("F");
 		
-		//this.IPacienteService.insertar(pac2);
+		this.IPacienteService.insertar(pac2);
 		
 	
 	}
