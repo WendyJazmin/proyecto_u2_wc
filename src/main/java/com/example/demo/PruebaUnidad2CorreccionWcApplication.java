@@ -2,6 +2,7 @@ package com.example.demo;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.demo.repository.modelo.Doctor;
 import com.example.demo.repository.modelo.Paciente;
+import com.example.demo.repository.modelo.PacienteSencillo;
 import com.example.demo.service.IDoctorService;
 import com.example.demo.service.IGestorCitaMedicaService;
 import com.example.demo.service.IPacienteService;
@@ -92,9 +94,18 @@ public class PruebaUnidad2CorreccionWcApplication implements CommandLineRunner{
 				//this.IPacienteService.insertar(pac2);
 		
 				//generar cita
-				this.iGestorCitaMedicaService.generarCita("2132434353", LocalDateTime.now(), new BigDecimal(40), "Inca", "1223244", "21221235");
+				//this.iGestorCitaMedicaService.generarCita("2132434353", LocalDateTime.now(), new BigDecimal(40), "Inca", "1223244", "21221235");
+				
 				//actualizar cita medica
-				this.iGestorCitaMedicaService.actualizarCita("3232425", "Covid", "Paracetamol", LocalDateTime.now());
-	}
+				//this.iGestorCitaMedicaService.actualizarCita("2132434353", "Covid", "Paracetamol", LocalDateTime.now());
+	
+				//funcionalidad reporte de paciente
+				//FECHA 2022-08-02 15:19:58.595382
+				List<PacienteSencillo> sencilla = this.IPacienteService.buscarPacienteSencillo(LocalDateTime.of(2022, 8, 2, 15, 19), "M");
+		
+				for(PacienteSencillo item : sencilla) {
+					logg.info(item);
+				}
+		}
 
 }

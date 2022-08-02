@@ -1,0 +1,2 @@
+2022-08-02 15:50:43 INFO  PruebaUnidad2CorreccionWcApplication:108 - com.example.demo.repository.modelo.PacienteSencillo@400088ce
+2022-08-02 15:52:43 INFO  PruebaUnidad2CorreccionWcApplication:107 - PacienteSencillo [cedula=223435, nombre=Alex, fechaNacimiento=2022-08-02T15:19:58.595382, genero=M]

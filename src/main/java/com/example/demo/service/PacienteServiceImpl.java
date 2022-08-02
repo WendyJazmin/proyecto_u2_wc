@@ -1,10 +1,14 @@
 package com.example.demo.service;
 
+import java.time.LocalDateTime;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.repository.IPacienteRepository;
 import com.example.demo.repository.modelo.Paciente;
+import com.example.demo.repository.modelo.PacienteSencillo;
 
 
 
@@ -42,6 +46,12 @@ public class PacienteServiceImpl implements IPacienteService{
 	public Paciente buscarPorCedula(String cedula) {
 		// TODO Auto-generated method stub
 		return this.iPacienteRepository.buscarPorCedula(cedula);
+	}
+
+	@Override
+	public List<PacienteSencillo> buscarPacienteSencillo(LocalDateTime fecha, String genero) {
+		// TODO Auto-generated method stub
+		return this.iPacienteRepository.buscarPacienteSencillo(fecha, genero);
 	}
 	
 

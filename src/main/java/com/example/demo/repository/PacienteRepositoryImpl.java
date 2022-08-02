@@ -45,7 +45,7 @@ public class PacienteRepositoryImpl implements IPacienteRepository{
 	@Override
 	public void eliminar(Integer id) {
 		// TODO Auto-generated method stub
-		this.entityManager.remove(id);
+		this.entityManager.remove(this.buscar(id));
 	}
 
 	@Override

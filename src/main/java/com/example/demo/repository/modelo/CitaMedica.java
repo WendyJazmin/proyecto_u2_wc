@@ -14,8 +14,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 
-@Entity(name = "CitaMedica2")
-@Table(name = "cita_medica2")
+@Entity
+@Table(name = "cita_medica")
 public class CitaMedica {
 
 	@Id
@@ -25,8 +25,8 @@ public class CitaMedica {
 	private Integer id;
 	
 	
-	@Column(name="cime_numero_cita")
-	private String numeroCita;
+	@Column(name="cime_numero")
+	private String numero;
 	
 	@Column(name="cime_fecha_cita")
 	private LocalDateTime fechaCita;
@@ -67,11 +67,11 @@ public class CitaMedica {
 	}
 
 	public String getNumeroCita() {
-		return numeroCita;
+		return numero;
 	}
 
 	public void setNumeroCita(String numeroCita) {
-		this.numeroCita = numeroCita;
+		this.numero = numeroCita;
 	}
 
 	public LocalDateTime getFechaCita() {

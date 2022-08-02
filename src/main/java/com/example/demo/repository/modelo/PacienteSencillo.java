@@ -22,8 +22,12 @@ public class PacienteSencillo {
 	}
 
 	
-	
 
+	@Override
+	public String toString() {
+		return "PacienteSencillo [cedula=" + cedula + ", nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento
+				+ ", genero=" + genero + "]";
+	}
 	//get y set
 	public String getCedula() {
 		return cedula;

@@ -7,6 +7,7 @@ import com.example.demo.repository.modelo.Paciente;
 import com.example.demo.repository.modelo.PacienteSencillo;
 
 public interface IPacienteRepository {
+	
 	public void insertar(Paciente paciente);
 	
 	public Paciente buscar(Integer id);

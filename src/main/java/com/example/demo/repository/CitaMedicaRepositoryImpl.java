@@ -12,7 +12,7 @@ import com.example.demo.repository.modelo.CitaMedica;
 
 @Repository
 @Transactional
-public class CitaMedicaRepository implements ICitaMedicaRepository{
+public class CitaMedicaRepositoryImpl implements ICitaMedicaRepository{
 
 	@PersistenceContext
 	private EntityManager entityManager;

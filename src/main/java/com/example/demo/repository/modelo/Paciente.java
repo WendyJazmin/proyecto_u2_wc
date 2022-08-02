@@ -13,8 +13,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 
-@Entity(name = "Paciente2")
-@Table(name = "paciente2")
+@Entity
+@Table(name = "paciente")
 public class Paciente {
 
 	
@@ -53,6 +53,15 @@ public class Paciente {
 	private List<CitaMedica> citas;
 
 	
+	
+	
+
+	@Override
+	public String toString() {
+		return "Paciente [id=" + id + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido
+				+ ", fechaNacimiento=" + fechaNacimiento + ", codigoSeguro=" + codigoSeguro + ", estatura=" + estatura
+				+ ", peso=" + peso + ", genero=" + genero + ", citas=" + citas + "]";
+	}
 
 	//set y get
 	public Integer getId() {
